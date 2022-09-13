@@ -1,0 +1,179 @@
+#ifndef COMMON_IS_INCLUDED 
+#include "common.h"
+#endif
+#include "fdm.cc"
+#include "bem.cc"
+//#include "frw.cc"
+
+
+using namespace std;
+
+//-------------------------------------------------------------------
+//   main funcion
+//-------------------------------------------------------------------
+
+int main(int argc, char* argv[])
+{
+	string input_data; // input file name
+    string result_out; // output file name
+	string use_method; // auto | fdm | bem | frw
+	double shrink_val; // shrink boundary in terms of conductions, it is the extension of the minimum rectangle containing all conductions
+    string buffer; // line buffer for input file
+
+	Boundary boundary;
+    double dielectric;
+
+	// change map<string, Net*> to map<int, Net*> for keeping the right net order
+	// if string is used, net10 is prior to net2
+	// if class needs to be the value of one map, must use pointer
+//     map<string, Net*> nets;
+//     map<string, Net*>::iterator nets_iter;
+    map<int, Net*> nets;
+    map<int, Net*>::iterator nets_iter;
+    string net_name;
+	int net_order;
+
+	// Here net is defined as pointer because it needs to be inserted into map in the 'if' block
+    Net* net;
+	double x0, z0, x1, z1;
+    vector<double> nets_x; // set of x-coordinates of all nets
+    vector<double> nets_z; // set of y-coordinates of all nets
+
+	// Parse arguments
+	/*
+    if (argc == 5 && !strcmp(argv[1],"-in") && !strcmp(argv[3], "-out")) {
+        input_data = argv[2];
+        result_out = argv[4];
+		use_method = "auto";
+	} else if (argc == 7 && !strcmp(argv[1],"-in") && !strcmp(argv[3], "-out") && !strcmp(argv[5], "-method")) {
+        input_data = argv[2];
+        result_out = argv[4];
+		use_method = argv[6];
+	} else {
+        print_usage();
+        exit(1);
+	}
+	*/
+
+	int opt_err;
+	opt_err = parse_options(argc, argv, input_data, result_out, use_method, shrink_val);
+	if (opt_err) {
+		exit(1);
+	}
+
+	// Read file
+    ifstream in(input_data);
+    if (! in.is_open()) {
+        cout << "Error opening file " << input_data << endl;
+        exit(1);
+    } 
+
+	// Parse line
+    // need to consider trapezoid net with multiple lines in input.data
+    // class Net's coordinate should be a 2d structure and each element represent on subnet of the trapezoid
+    // use HASH to determine if there has been one net with the same name
+    // the gauss surface is formed as the smallest rectangle including all subnets, so the rectangle's coordinate should be maintainted
+	//
+	// Used to assign initial value for boundary.rec_ in deciding the minimum rectangle containing all conductors
+	bool first = true;
+
+    while (!in.eof()) {
+        getline (in, buffer);
+//        auto tokens = split(buffer, " ");
+		vector <string> tokens;
+		split_2(buffer, " ", tokens);
+        if (tokens.size() == 0) {
+            continue;
+        }
+        if (tokens[0] == "boundary") {
+            x0 = atof(tokens[1].c_str());
+            z0 = atof(tokens[2].c_str());
+            x1 = atof(tokens[3].c_str());
+            z1 = atof(tokens[4].c_str());
+            boundary.set(x0, z0, x1, z1);
+        } else if (tokens[0] == "dielectric") {
+            dielectric = atof(tokens[1].c_str());
+        } else if (tokens[0] == "net") {
+            x0 = atof(tokens[2].c_str());
+            z0 = atof(tokens[3].c_str());
+            x1 = atof(tokens[4].c_str());
+            z1 = atof(tokens[5].c_str());
+
+			// Used to process rec_
+            if (first) {
+                first = false;
+                boundary.rec_x0 = x0;
+                boundary.rec_z0 = z0;
+                boundary.rec_x1 = x1;
+                boundary.rec_z1 = z1;
+            } else {
+                // update rec_ only if the other nets/subnets affects the shrink boundary
+				boundary.rec_x0 = min(boundary.rec_x0, x0);
+				boundary.rec_z0 = min(boundary.rec_z0, z0);
+				boundary.rec_x1 = max(boundary.rec_x1, x1);
+				boundary.rec_z1 = max(boundary.rec_z1, z1);
+            }
+
+            nets_x.push_back(x0);
+            nets_x.push_back(x1);
+            nets_z.push_back(z0);
+            nets_z.push_back(z1);
+
+            // if it's the 1st appearence, initialize a new net object
+            // otherwise execute the corresponding insert()
+            net_name = tokens[1];
+			sscanf(net_name.c_str(), "net%d", &net_order);
+//            nets_iter = nets.find(net_name);
+            nets_iter = nets.find(net_order);
+            if (nets_iter == nets.end()) {
+                net = new Net(x0,z0,x1,z1);
+//                nets[net_name] = net;
+                nets[net_order] = net;
+            } else {
+                nets_iter->second->insert(x0,z0,x1,z1);
+            }
+        } else if (tokens[0] != "") {
+			cout << "Unknown identifier: " << tokens[0] << endl;
+			exit(1);
+		}
+    }
+    in.close();
+
+	// Show input data
+	//print_input(boundary, dielectric, nets);
+
+	// Determine if shrink boundary
+	boundary.shrink(shrink_val);
+
+	int is_ok;
+	if (use_method == "fdm") {
+		is_ok = fdm(nets, nets_iter, boundary, nets_x, nets_z, dielectric);
+	} else if (use_method == "bem") {
+		// force shrink_val as 0.2 in bem
+		is_ok = bem(nets, nets_iter, boundary, dielectric, 0.2);
+	} else if (use_method == "auto") {
+		// cholmod is opt to fail
+		is_ok = fdm(nets, nets_iter, boundary, nets_x, nets_z, dielectric);
+		if (is_ok == 0) {
+			// force shrink_val as 0.2 in bem
+			is_ok = bem(nets, nets_iter, boundary, dielectric, 0.2);
+		}
+		/*
+	} else if (use_method == "frw") {
+		is_ok = frw(nets, boundary);
+		*/
+	} else {
+		cout << use_method << " is not supported yet" << endl;
+		exit(1);
+	}
+
+    // print memory and runtime
+    print_runtime();
+	cout << endl;
+
+    // print result on screen and in file
+    print_result_2(nets, result_out, 6);
+	cout << endl;
+
+	return is_ok;
+}

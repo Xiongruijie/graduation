@@ -1,0 +1,5 @@
+# length = 1um
+# master = net0
+          net0          net1          net2          net3          net4          net5          net6          net7          net8
+ net0: 0.307687fF   0.0128597fF   0.0128597fF   0.000157226fF   0.000157216fF   0.120409fF   0.120447fF   0.00107407fF   0.00107424fF
+

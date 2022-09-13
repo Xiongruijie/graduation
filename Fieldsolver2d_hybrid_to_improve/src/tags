@@ -1,0 +1,987 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACLRecord	frw/gds2geo/gdsii/_records.py	/^class ACLRecord(SimpleOptionalRecord):$/;"	c
+ARCH_TYPE	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeType {FLAT_TYPE, ARCH_TYPE, SIDE_TYPE};$/;"	e	enum:RectangleGL::ShapeType
+ARef	frw/gds2geo/gdsii/elements.py	/^class ARef(_Base):$/;"	c
+AbstractRecord	frw/gds2geo/gdsii/_records.py	/^class AbstractRecord(object):$/;"	c
+Action	frw/gds2geo/argparse.py	/^class Action(_AttributeHolder):$/;"	c
+AdjacencyList	frw/geo2condlist/geoloader.h	/^typedef std::list< std::pair<int,int> > AdjacencyList;$/;"	t
+ArgumentDefaultsHelpFormatter	frw/gds2geo/argparse.py	/^class ArgumentDefaultsHelpFormatter(HelpFormatter):$/;"	c
+ArgumentError	frw/gds2geo/argparse.py	/^class ArgumentError(Exception):$/;"	c
+ArgumentParser	frw/gds2geo/argparse.py	/^class ArgumentParser(_AttributeHolder, _ActionsContainer):$/;"	c
+ArgumentTypeError	frw/gds2geo/argparse.py	/^class ArgumentTypeError(Exception):$/;"	c
+BACK	frw/geo2condlist/gdsgeometry.h	/^    enum Dir {LEFT, RIGHT, BACK, FRONT, BOTTOM, TOP};$/;"	e	enum:Conductor::Dir
+BOTTOM	frw/geo2condlist/gdsgeometry.h	/^    enum Dir {LEFT, RIGHT, BACK, FRONT, BOTTOM, TOP};$/;"	e	enum:Conductor::Dir
+Border	common.h	/^Border::Border(int f, double c, double s, double e)$/;"	f	class:Border
+Border	common.h	/^class Border$/;"	c
+BoundStatic	frw/geo2condlist/geoloader.h	/^class BoundStatic{$/;"	c
+Boundary	common.h	/^class Boundary$/;"	c
+Boundary	frw/gds2geo/gdsii/elements.py	/^class Boundary(_Base):$/;"	c
+Box	frw/gds2geo/gdsii/elements.py	/^class Box(_Base):$/;"	c
+CAPLET	frw/geo2condlist/geoloader.h	/^    enum SolverType { CAPLET, FASTCAP, STANDARD };$/;"	e	enum:GeoLoader::SolverType
+COMMON_IS_INCLUDED	common.h	23;"	d
+CPF	bem.cc	/^void CPF(double xi, double eta, double xk, double yk, double nkx, double nky, double L, double& PF1, double& PF2)$/;"	f
+Capacitance	frw/FRWcapext.h	/^	Capacitance(){$/;"	f	class:Capacitance
+Capacitance	frw/FRWcapext.h	/^class Capacitance{$/;"	c
+CapacitanceMatrix	frw/FRWcapext.h	/^typedef  std::vector<Capacitance>  CapacitanceMatrix;$/;"	t
+Cell2d	frw/spacemanagement.cpp	/^Cell2d::Cell2d(double x_1, double x_2, double z_1, double z_2 , double extension )$/;"	f	class:Cell2d
+Cell2d	frw/spacemanagement.h	/^class Cell2d$/;"	c
+ColRowRecord	frw/gds2geo/gdsii/_records.py	/^class ColRowRecord(AbstractRecord, SecondVar):$/;"	c
+Conductor	frw/geo2condlist/gdsgeometry.cpp	/^Conductor::Conductor()$/;"	f	class:Conductor
+Conductor	frw/geo2condlist/gdsgeometry.cpp	/^Conductor::Conductor(int nMetal1, int nVia1)$/;"	f	class:Conductor
+Conductor	frw/geo2condlist/gdsgeometry.cpp	/^Conductor::Conductor(int nMetal1, int nVia1, int indexID)$/;"	f	class:Conductor
+Conductor	frw/geo2condlist/gdsgeometry.h	/^class Conductor{$/;"	c
+Conductor2d	frw/geo2condlist/gdsgeometry.h	/^class Conductor2d{$/;"	c
+ConductorFP	frw/geo2condlist/gdsgeometry.cpp	/^ConductorFP::ConductorFP()$/;"	f	class:ConductorFP
+ConductorFP	frw/geo2condlist/gdsgeometry.cpp	/^ConductorFP::ConductorFP(const Conductor &cond, const float unit)$/;"	f	class:ConductorFP
+ConductorFP	frw/geo2condlist/gdsgeometry.cpp	/^ConductorFP::ConductorFP(const int nMetal, const int nVia)$/;"	f	class:ConductorFP
+ConductorFP	frw/geo2condlist/gdsgeometry.h	/^class ConductorFP$/;"	c
+ConductorFPList	frw/geo2condlist/gdsgeometry.cpp	/^ConductorFPList::ConductorFPList($/;"	f	class:ConductorFPList
+ConductorFPList	frw/geo2condlist/gdsgeometry.cpp	/^ConductorFPList::ConductorFPList(const ConductorFPList &condFGList)$/;"	f	class:ConductorFPList
+ConductorFPList	frw/geo2condlist/gdsgeometry.cpp	/^ConductorFPList::ConductorFPList(const ConductorList &condList, const float unit)$/;"	f	class:ConductorFPList
+ConductorFPList	frw/geo2condlist/gdsgeometry.cpp	/^ConductorFPList::ConductorFPList(const allocator_type &allo)$/;"	f	class:ConductorFPList
+ConductorFPList	frw/geo2condlist/gdsgeometry.h	/^class ConductorFPList : public std::list<ConductorFP>$/;"	c
+ConductorLayerNotCompatibleError	frw/geo2condlist/gdsgeometry.h	/^    explicit ConductorLayerNotCompatibleError ($/;"	f	class:ConductorLayerNotCompatibleError
+ConductorLayerNotCompatibleError	frw/geo2condlist/gdsgeometry.h	/^class ConductorLayerNotCompatibleError : public std::logic_error{$/;"	c
+ConductorList	frw/geo2condlist/gdsgeometry.h	/^class ConductorList:public std::list<Conductor>{$/;"	c
+ConductorList2d	frw/geo2condlist/gdsgeometry.h	/^class ConductorList2d:public std::list<Conductor2d>{$/;"	c
+ConnectedRectangleList	frw/geo2condlist/gdsgeometry.h	/^typedef std::list<RectangleList> ConnectedRectangleList;$/;"	t
+DEBUG	frw/geo2condlist/debug.h	26;"	d
+DEBUG_H	frw/geo2condlist/debug.h	24;"	d
+DEFAULT_COINCIDENTAL_MARGIN	frw/geo2condlist/debug.h	/^    const float DEFAULT_COINCIDENTAL_MARGIN = 0.05;$/;"	m	namespace:caplet
+DEFAULT_PROJECTION_DISTANCE	frw/geo2condlist/debug.h	/^    const float DEFAULT_PROJECTION_DISTANCE = 2e-6f;$/;"	m	namespace:caplet
+DEFAULT_PROJECTION_MERGE_DISTANCE	frw/geo2condlist/debug.h	/^    const float DEFAULT_PROJECTION_MERGE_DISTANCE = 1e-7f;$/;"	m	namespace:caplet
+DICT	frw/gds2geo/gdsii/tags.py	/^DICT = {$/;"	v
+DICT	frw/gds2geo/gdsii/types.py	/^DICT = {$/;"	v
+DataSizeError	frw/gds2geo/gdsii/exceptions.py	/^class DataSizeError(FormatError):$/;"	c
+Dir	frw/geo2condlist/gdsgeometry.h	/^    enum Dir {LEFT, RIGHT, BACK, FRONT, BOTTOM, TOP};$/;"	g	class:Conductor
+Dir	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	g
+DirAdjacencyList	frw/geo2condlist/geoloader.h	/^typedef std::vector< AdjacencyList >    DirAdjacencyList;$/;"	t
+DirAdjacencyListOfRectangleList	frw/geo2condlist/geoloader.h	/^typedef std::list< DirAdjacencyList >   DirAdjacencyListOfRectangleList;$/;"	t
+DirRectangleGLList	frw/geo2condlist/gdsgeometry.h	/^typedef std::vector<RectangleGLList> DirRectangleGLList;$/;"	t
+EndOfFileError	frw/gds2geo/gdsii/exceptions.py	/^class EndOfFileError(FormatError):$/;"	c
+ExtractionInfo	frw/geo2condlist/geoloader.h	/^class ExtractionInfo{$/;"	c
+ExtractionInfoList	frw/geo2condlist/geoloader.h	/^typedef std::list<ExtractionInfo> ExtractionInfoList;$/;"	t
+FASTCAP	frw/geo2condlist/geoloader.h	/^    enum SolverType { CAPLET, FASTCAP, STANDARD };$/;"	e	enum:GeoLoader::SolverType
+FLAT	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+FLAT_SHAPE	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeDir  {X_DECAY=0, Y_DECAY=1, Z_DECAY=2, FLAT_SHAPE=3};$/;"	e	enum:RectangleGL::ShapeDir
+FLAT_TYPE	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeType {FLAT_TYPE, ARCH_TYPE, SIDE_TYPE};$/;"	e	enum:RectangleGL::ShapeType
+FPoint2d	frw/spacemanagement.cpp	/^FPoint2d::FPoint2d( double x_1, double z_1 ){$/;"	f	class:FPoint2d
+FPoint2d	frw/spacemanagement.cpp	/^FPoint2d::FPoint2d(){$/;"	f	class:FPoint2d
+FPoint2d	frw/spacemanagement.h	/^class FPoint2d{$/;"	c
+FRONT	frw/geo2condlist/gdsgeometry.h	/^    enum Dir {LEFT, RIGHT, BACK, FRONT, BOTTOM, TOP};$/;"	e	enum:Conductor::Dir
+FRW	frw/FRWcapext.cpp	/^void *FRW( void *condIn ){$/;"	f
+FRWControl	frw/FRWcapext.h	/^class FRWControl{$/;"	c
+Face	frw/FRWcapext.cpp	/^Face::Face( FPoint2d &minPoint, double size ){$/;"	f	class:Face
+Face	frw/FRWcapext.cpp	/^Face::Face( double x_1, double x_2,  double z_1, double z_2 ){$/;"	f	class:Face
+Face	frw/FRWcapext.cpp	/^Face::Face(){$/;"	f	class:Face
+Face	frw/FRWcapext.cpp	/^Face::Face(double x_1, double z_1, double size ){$/;"	f	class:Face
+Face	frw/FRWcapext.h	/^class Face{$/;"	c
+FileNotFoundError	frw/geo2condlist/geoloader.h	/^    explicit FileNotFoundError(const std::string &fileName)$/;"	f	class:FileNotFoundError
+FileNotFoundError	frw/geo2condlist/geoloader.h	/^class FileNotFoundError : public std::runtime_error{$/;"	c
+FileType	frw/gds2geo/argparse.py	/^class FileType(object):$/;"	c
+FloatingRandomWalk	frw/FRWcapext.cpp	/^void FloatingRandomWalk(  FPoint2d &pointOnVGS, Face &cube, Cell2d* &rootCell, Cell2d* &leafCell, FPoint2d &nextPoint,  FPoint2d &point2d, OneConduct &cond,  TestList &condList,  GridOctree2d &gridOctree,  CapacitanceMatrix &capMatrix $/;"	f
+FormatError	frw/gds2geo/gdsii/exceptions.py	/^class FormatError(Exception):$/;"	c
+FormatRecord	frw/gds2geo/gdsii/_records.py	/^class FormatRecord(SimpleOptionalRecord, SecondVar):$/;"	c
+GDS	frw/geo2condlist/geoloader.h	/^class GDS{\/\/the region of the FRW solution$/;"	c
+GDSGEOMETRY_H	frw/geo2condlist/gdsgeometry.h	25;"	d
+GEOLOADER_H	frw/geo2condlist/geoloader.h	24;"	d
+GEx	frw/FRWcapext.cpp	/^double GEx( double x ,double L, vector<double> &GExVT )$/;"	f
+GExVT	frw/FRWcapext.h	/^	static vector<double>  GExVT;$/;"	m	class:FRWControl
+GExVT	frw/FRWcapext.h	/^vector<double>   FRWControl::GExVT;$/;"	m	class:FRWControl
+GExVTSize	frw/FRWcapext.h	/^	static int GExVTSize;$/;"	m	class:FRWControl
+GExVTSize	frw/FRWcapext.h	/^int FRWControl::GExVTSize=0;$/;"	m	class:FRWControl
+GEyVTSize	frw/FRWcapext.h	/^	static int GEyVTSize;$/;"	m	class:FRWControl
+GEz	frw/FRWcapext.cpp	/^double GEz(double x,double L ,vector<double>  &GEzVT )$/;"	f
+GEzVT	frw/FRWcapext.h	/^	static vector<double>  GEzVT;$/;"	m	class:FRWControl
+GEzVT	frw/FRWcapext.h	/^vector<double>   FRWControl::GEzVT;$/;"	m	class:FRWControl
+GEzVTSize	frw/FRWcapext.h	/^	static int GEzVTSize;$/;"	m	class:FRWControl
+GEzVTSize	frw/FRWcapext.h	/^int FRWControl::GEzVTSize=0;$/;"	m	class:FRWControl
+GaussianSurface2d	frw/FRWcapext.cpp	/^GaussianSurface2d::GaussianSurface2d(double x_1, double x_2, double z_1, double z_2 ,std::vector<double> extensionDistance ){$/;"	f	class:GaussianSurface2d
+GaussianSurface2d	frw/FRWcapext.h	/^class GaussianSurface2d{$/;"	c
+GaussianSurfaceList	frw/geo2condlist/gdsgeometry.h	/^    GaussianSurfaceList(){$/;"	f	class:GaussianSurfaceList
+GaussianSurfaceList	frw/geo2condlist/gdsgeometry.h	/^class GaussianSurfaceList:public std::list<GaussianSurface2d>{$/;"	c
+GaussianSurfaceList2d	frw/geo2condlist/gdsgeometry.h	/^    GaussianSurfaceList2d(){$/;"	f	class:GaussianSurfaceList2d
+GaussianSurfaceList2d	frw/geo2condlist/gdsgeometry.h	/^class GaussianSurfaceList2d:public std::list<GaussianSurface2d>{$/;"	c
+GeoLoader	frw/geo2condlist/geoloader.cpp	/^GeoLoader::GeoLoader()$/;"	f	class:GeoLoader
+GeoLoader	frw/geo2condlist/geoloader.h	/^class GeoLoader{$/;"	c
+GeometryNotManhattanError	frw/geo2condlist/gdsgeometry.h	/^    explicit GeometryNotManhattanError()$/;"	f	class:GeometryNotManhattanError
+GeometryNotManhattanError	frw/geo2condlist/gdsgeometry.h	/^class GeometryNotManhattanError : public std::logic_error$/;"	c
+GreenVT	frw/FRWcapext.h	/^	static vector<double>  GreenVT; $/;"	m	class:FRWControl
+GreenVT	frw/FRWcapext.h	/^vector<double>   FRWControl::GreenVT;$/;"	m	class:FRWControl
+GreenVTSize	frw/FRWcapext.h	/^	static int GreenVTSize;$/;"	m	class:FRWControl
+GreenVTSize	frw/FRWcapext.h	/^int FRWControl::GreenVTSize=0;$/;"	m	class:FRWControl
+GridOctree2d	frw/spacemanagement.h	/^class GridOctree2d:public std::vector< std::vector<Cell2d> > {$/;"	c
+HelpFormatter	frw/gds2geo/argparse.py	/^class HelpFormatter(object):$/;"	c
+ID	frw/geo2condlist/gdsgeometry.h	/^    int ID;$/;"	m	class:Conductor
+IncorrectDataSize	frw/gds2geo/gdsii/exceptions.py	/^class IncorrectDataSize(FormatError):$/;"	c
+IteratorList	frw/geo2condlist/gdsgeometry.h	/^    typedef std::list<RectangleGLList::iterator> IteratorList;$/;"	t	class:RectangleGLList
+LEFT	frw/geo2condlist/gdsgeometry.h	/^    enum Dir {LEFT, RIGHT, BACK, FRONT, BOTTOM, TOP};$/;"	e	enum:Conductor::Dir
+LayeredConductorList	frw/geo2condlist/gdsgeometry.h	/^typedef std::vector<ConductorList> LayeredConductorList;$/;"	t
+LayeredConnectedRectangleList	frw/geo2condlist/gdsgeometry.h	/^typedef std::vector<ConnectedRectangleList> LayeredConnectedRectangleList;$/;"	t
+LayeredDirRectangleGLList	frw/geo2condlist/gdsgeometry.h	/^typedef std::vector<DirRectangleGLList> LayeredDirRectangleGLList;$/;"	t
+LayeredPolygonList	frw/geo2condlist/gdsgeometry.h	/^typedef std::vector<PolygonList> LayeredPolygonList;$/;"	t
+LayeredRectangleList	frw/geo2condlist/gdsgeometry.h	/^typedef std::vector<RectangleList> LayeredRectangleList;$/;"	t
+Library	frw/gds2geo/gdsii/library.py	/^class Library(list):$/;"	c
+LongOptions	common.h	/^const struct option LongOptions[] =$/;"	v	typeref:struct:option
+Matrix_frw	frw/geo2condlist/geoloader.h	/^typedef std::vector<std::vector<float> > Matrix_frw;$/;"	t
+MissingRecord	frw/gds2geo/gdsii/exceptions.py	/^class MissingRecord(FormatError):$/;"	c
+Namespace	frw/gds2geo/argparse.py	/^class Namespace(_AttributeHolder):$/;"	c
+Net	common.h	/^Net::Net(double a, double b, double c, double d, int Net_name)$/;"	f	class:Net
+Net	common.h	/^class Net$/;"	c
+Ng	frw/geo2condlist/gdsgeometry.h	/^    long Nt,Ng;$/;"	m	class:GaussianSurfaceList
+Ng	frw/geo2condlist/gdsgeometry.h	/^    long Nt,Ng;$/;"	m	class:GaussianSurfaceList2d
+Node	frw/gds2geo/gdsii/elements.py	/^class Node(_Base):$/;"	c
+NormalDirection2d	frw/FRWcapext.h	/^enum NormalDirection2d{ pX, pZ, nX, nZ };$/;"	g
+Nt	frw/geo2condlist/gdsgeometry.h	/^    long Nt,Ng;$/;"	m	class:GaussianSurfaceList
+Nt	frw/geo2condlist/gdsgeometry.h	/^    long Nt,Ng;$/;"	m	class:GaussianSurfaceList2d
+ONE_OR_MORE	frw/gds2geo/argparse.py	/^ONE_OR_MORE = '+'$/;"	v
+OPTIONAL	frw/gds2geo/argparse.py	/^OPTIONAL = '?'$/;"	v
+OneConduct	frw/geo2condlist/gdsgeometry.h	/^class OneConduct$/;"	c
+OptionalWholeRecord	frw/gds2geo/gdsii/_records.py	/^class OptionalWholeRecord(SimpleOptionalRecord):$/;"	c
+PARSER	frw/gds2geo/argparse.py	/^PARSER = 'A...'$/;"	v
+PDFIntegralOnVGS	frw/geo2condlist/gdsgeometry.h	/^    double PDFIntegralOnVGS;$/;"	m	class:GaussianSurfaceList
+PDFIntegralOnVGS	frw/geo2condlist/gdsgeometry.h	/^    double PDFIntegralOnVGS;$/;"	m	class:GaussianSurfaceList2d
+Path	frw/gds2geo/gdsii/elements.py	/^class Path(_Base):$/;"	c
+Point	frw/geo2condlist/gdsgeometry.cpp	/^Point::Point()$/;"	f	class:Point
+Point	frw/geo2condlist/gdsgeometry.cpp	/^Point::Point(int xx, int yy)$/;"	f	class:Point
+Point	frw/geo2condlist/gdsgeometry.cpp	/^Point::Point(int xx, int yy, int zz)$/;"	f	class:Point
+Point	frw/geo2condlist/gdsgeometry.h	/^class Point{$/;"	c
+PointList	frw/geo2condlist/gdsgeometry.h	/^typedef std::list<Point> PointList;$/;"	t
+Polygon	frw/geo2condlist/gdsgeometry.cpp	/^Polygon::Polygon( const PointList::allocator_type &allo )$/;"	f	class:Polygon
+Polygon	frw/geo2condlist/gdsgeometry.cpp	/^Polygon::Polygon( const Polygon& poly)$/;"	f	class:Polygon
+Polygon	frw/geo2condlist/gdsgeometry.cpp	/^Polygon::Polygon($/;"	f	class:Polygon
+Polygon	frw/geo2condlist/gdsgeometry.h	/^class Polygon : public PointList{$/;"	c
+PolygonList	frw/geo2condlist/gdsgeometry.h	/^typedef std::list<Polygon> PolygonList;$/;"	t
+PropertiesRecord	frw/gds2geo/gdsii/_records.py	/^class PropertiesRecord(AbstractRecord):$/;"	c
+REMAINDER	frw/gds2geo/argparse.py	/^REMAINDER = '...'$/;"	v
+REV_DICT	frw/gds2geo/gdsii/tags.py	/^REV_DICT = {}$/;"	v
+REV_DICT	frw/gds2geo/gdsii/types.py	/^REV_DICT = {}$/;"	v
+RIGHT	frw/geo2condlist/gdsgeometry.h	/^    enum Dir {LEFT, RIGHT, BACK, FRONT, BOTTOM, TOP};$/;"	e	enum:Conductor::Dir
+RawDescriptionHelpFormatter	frw/gds2geo/argparse.py	/^class RawDescriptionHelpFormatter(HelpFormatter):$/;"	c
+RawTextHelpFormatter	frw/gds2geo/argparse.py	/^class RawTextHelpFormatter(RawDescriptionHelpFormatter):$/;"	c
+Reader	frw/gds2geo/gdsii/record.py	/^class Reader(object):$/;"	c
+Record	frw/gds2geo/gdsii/record.py	/^class Record(object):$/;"	c
+Rectangle	frw/geo2condlist/gdsgeometry.cpp	/^Rectangle::Rectangle(  int x1, int x2, int y1, int y2, int z1, int z2 )$/;"	f	class:Rectangle
+Rectangle	frw/geo2condlist/gdsgeometry.cpp	/^Rectangle::Rectangle( const Polygon &poly ) throw (ShapeTransformationError)$/;"	f	class:Rectangle
+Rectangle	frw/geo2condlist/gdsgeometry.cpp	/^Rectangle::Rectangle( const Rectangle &rect )$/;"	f	class:Rectangle
+Rectangle	frw/geo2condlist/gdsgeometry.cpp	/^Rectangle::Rectangle()$/;"	f	class:Rectangle
+Rectangle	frw/geo2condlist/gdsgeometry.cpp	/^Rectangle::Rectangle(Dir normal, int x1, int x2, int y1, int y2, int z1, int z2)$/;"	f	class:Rectangle
+Rectangle	frw/geo2condlist/gdsgeometry.h	/^class Rectangle{$/;"	c
+RectangleGL	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGL::RectangleGL()$/;"	f	class:RectangleGL
+RectangleGL	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGL::RectangleGL(const Rectangle & rect, float unit)$/;"	f	class:RectangleGL
+RectangleGL	frw/geo2condlist/gdsgeometry.h	/^class RectangleGL$/;"	c
+RectangleGLList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGLList::RectangleGLList(const RectangleGLList &rectList)$/;"	f	class:RectangleGLList
+RectangleGLList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGLList::RectangleGLList(const allocator_type &allo)$/;"	f	class:RectangleGLList
+RectangleGLList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGLList::RectangleGLList(iterator first, iterator last, const allocator_type &allo)$/;"	f	class:RectangleGLList
+RectangleGLList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGLList::RectangleGLList(size_type n, const RectangleGL &value, const allocator_type &allo)$/;"	f	class:RectangleGLList
+RectangleGLList	frw/geo2condlist/gdsgeometry.h	/^class RectangleGLList : public std::list<RectangleGL>$/;"	c
+RectangleList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleList::RectangleList( iterator first, iterator last, const allocator_type &allo)$/;"	f	class:RectangleList
+RectangleList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleList::RectangleList(const RectangleList &rectList)$/;"	f	class:RectangleList
+RectangleList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleList::RectangleList(const allocator_type &allo)$/;"	f	class:RectangleList
+RectangleList	frw/geo2condlist/gdsgeometry.cpp	/^RectangleList::RectangleList(size_type n, const Rectangle &value, const allocator_type &allo)$/;"	f	class:RectangleList
+RectangleList	frw/geo2condlist/gdsgeometry.h	/^class RectangleList : public std::list<Rectangle>$/;"	c
+RectangleMap	frw/geo2condlist/gdsgeometry.h	/^typedef std::multimap<double, Rectangle, std::greater<double> > RectangleMap;$/;"	t
+SIDE_TYPE	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeType {FLAT_TYPE, ARCH_TYPE, SIDE_TYPE};$/;"	e	enum:RectangleGL::ShapeType
+SRef	frw/gds2geo/gdsii/elements.py	/^class SRef(_Base):$/;"	c
+STANDARD	frw/geo2condlist/geoloader.h	/^    enum SolverType { CAPLET, FASTCAP, STANDARD };$/;"	e	enum:GeoLoader::SolverType
+STransRecord	frw/gds2geo/gdsii/_records.py	/^class STransRecord(OptionalWholeRecord):$/;"	c
+SecondVar	frw/gds2geo/gdsii/_records.py	/^class SecondVar(object):$/;"	c
+Sentry	fdm.cc	/^Sentry::Sentry(vector<double> v, double lo, double hi)$/;"	f	class:Sentry
+Sentry	fdm.cc	/^class Sentry$/;"	c	file:
+ShapeDir	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeDir  {X_DECAY=0, Y_DECAY=1, Z_DECAY=2, FLAT_SHAPE=3};$/;"	g	class:RectangleGL
+ShapeTransformationError	frw/geo2condlist/gdsgeometry.h	/^    explicit ShapeTransformationError (const std::string msg)$/;"	f	class:ShapeTransformationError
+ShapeTransformationError	frw/geo2condlist/gdsgeometry.h	/^class ShapeTransformationError : public std::logic_error$/;"	c
+ShapeType	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeType {FLAT_TYPE, ARCH_TYPE, SIDE_TYPE};$/;"	g	class:RectangleGL
+SimpleOptionalRecord	frw/gds2geo/gdsii/_records.py	/^class SimpleOptionalRecord(SimpleRecord):$/;"	c
+SimpleRecord	frw/gds2geo/gdsii/_records.py	/^class SimpleRecord(AbstractRecord):$/;"	c
+SolverType	frw/geo2condlist/geoloader.h	/^    enum SolverType { CAPLET, FASTCAP, STANDARD };$/;"	g	class:GeoLoader
+StringRecord	frw/gds2geo/gdsii/_records.py	/^class StringRecord(SimpleRecord):$/;"	c
+Structure	frw/gds2geo/gdsii/structure.py	/^class Structure(list):$/;"	c
+SubCellList2d	frw/spacemanagement.h	/^typedef std::list<Cell2d> SubCellList2d;$/;"	t
+SubConductor	frw/geo2condlist/gdsgeometry.cpp	/^SubConductor::SubConductor(  int x1, int x2, int y1, int y2, int z1, int z2):Rectangle(x1,x2,y1,y2,z1,z2){$/;"	f	class:SubConductor
+SubConductor	frw/geo2condlist/gdsgeometry.cpp	/^SubConductor::SubConductor( const Rectangle &rect,  int fatherCondID , bool viaOrNot ):Rectangle(rect) {$/;"	f	class:SubConductor
+SubConductor	frw/geo2condlist/gdsgeometry.cpp	/^SubConductor::SubConductor():Rectangle(){$/;"	f	class:SubConductor
+SubConductor	frw/geo2condlist/gdsgeometry.cpp	/^SubConductor::SubConductor(const Rectangle &rect):Rectangle(rect){$/;"	f	class:SubConductor
+SubConductor	frw/geo2condlist/gdsgeometry.cpp	/^SubConductor::SubConductor(const Rectangle &rect, int fatherCondID ):Rectangle(rect){$/;"	f	class:SubConductor
+SubConductor	frw/geo2condlist/gdsgeometry.h	/^class SubConductor: public Rectangle{$/;"	c
+SubConductorList	frw/geo2condlist/gdsgeometry.h	/^typedef std::list<SubConductor> SubConductorList;$/;"	t
+SubConductorList2d	frw/geo2condlist/gdsgeometry.h	/^typedef std::list<Subnet> SubConductorList2d;$/;"	t
+Subnet	common.h	/^Subnet::Subnet(double a, double b, double c, double d, int Net_name)$/;"	f	class:Subnet
+Subnet	common.h	/^class Subnet$/;"	c
+SumOfBGSArea	frw/geo2condlist/gdsgeometry.h	/^    double SumOfBGSArea;$/;"	m	class:GaussianSurfaceList
+SumOfBGSArea	frw/geo2condlist/gdsgeometry.h	/^    double SumOfBGSArea;$/;"	m	class:GaussianSurfaceList2d
+TOP	frw/geo2condlist/gdsgeometry.h	/^    enum Dir {LEFT, RIGHT, BACK, FRONT, BOTTOM, TOP};$/;"	e	enum:Conductor::Dir
+TestList	frw/geo2condlist/gdsgeometry.h	/^class TestList$/;"	c
+Text	frw/gds2geo/gdsii/elements.py	/^class Text(_Base):$/;"	c
+TimestampsRecord	frw/gds2geo/gdsii/_records.py	/^class TimestampsRecord(SimpleRecord, SecondVar):$/;"	c
+UnitsRecord	frw/gds2geo/gdsii/_records.py	/^class UnitsRecord(SimpleRecord, SecondVar):$/;"	c
+UnsupportedTagType	frw/gds2geo/gdsii/exceptions.py	/^class UnsupportedTagType(FormatError):$/;"	c
+VGSArea	frw/geo2condlist/gdsgeometry.h	/^    double VGSArea;$/;"	m	class:GaussianSurfaceList
+VGSArea	frw/geo2condlist/gdsgeometry.h	/^    double VGSArea;$/;"	m	class:GaussianSurfaceList2d
+WHITE_BACKGROUND	frw/geo2condlist/debug.h	45;"	d
+X	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+XM	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+XP	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+XYRecord	frw/gds2geo/gdsii/_records.py	/^class XYRecord(SimpleRecord):$/;"	c
+X_DECAY	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeDir  {X_DECAY=0, Y_DECAY=1, Z_DECAY=2, FLAT_SHAPE=3};$/;"	e	enum:RectangleGL::ShapeDir
+Y	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+YM	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+YP	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+Y_DECAY	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeDir  {X_DECAY=0, Y_DECAY=1, Z_DECAY=2, FLAT_SHAPE=3};$/;"	e	enum:RectangleGL::ShapeDir
+Z	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+ZERO_OR_MORE	frw/gds2geo/argparse.py	/^ZERO_OR_MORE = '*'$/;"	v
+ZM	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+ZP	frw/geo2condlist/gdsgeometry.h	/^enum Dir {  X=1, Y=2, Z=3, XP=1, XM=-1, YP=2, YM=-2, ZP=3, ZM=-3, FLAT=0 };$/;"	e	enum:Dir
+Z_DECAY	frw/geo2condlist/gdsgeometry.h	/^    enum ShapeDir  {X_DECAY=0, Y_DECAY=1, Z_DECAY=2, FLAT_SHAPE=3};$/;"	e	enum:RectangleGL::ShapeDir
+_ATTRTABLE	frw/gds2geo/gdsii/library.py	/^_ATTRTABLE = _records.OptionalWholeRecord('attrtable', tags.ATTRTABLE)$/;"	v
+_ActionsContainer	frw/gds2geo/argparse.py	/^class _ActionsContainer(object):$/;"	c
+_AppendAction	frw/gds2geo/argparse.py	/^class _AppendAction(Action):$/;"	c
+_AppendConstAction	frw/gds2geo/argparse.py	/^class _AppendConstAction(Action):$/;"	c
+_ArgumentGroup	frw/gds2geo/argparse.py	/^class _ArgumentGroup(_ActionsContainer):$/;"	c
+_AttributeHolder	frw/gds2geo/argparse.py	/^class _AttributeHolder(object):$/;"	c
+_BGNEXTN	frw/gds2geo/gdsii/elements.py	/^_BGNEXTN = _records.SimpleOptionalRecord('bgn_extn', tags.BGNEXTN)$/;"	v
+_BGNLIB	frw/gds2geo/gdsii/library.py	/^_BGNLIB = _records.TimestampsRecord('mod_time', 'acc_time', tags.BGNLIB)$/;"	v
+_BGNSTR	frw/gds2geo/gdsii/structure.py	/^_BGNSTR = _records.TimestampsRecord('mod_time', 'acc_time', tags.BGNSTR)$/;"	v
+_BOXTYPE	frw/gds2geo/gdsii/elements.py	/^_BOXTYPE = _records.SimpleRecord('box_type', tags.BOXTYPE)$/;"	v
+_Base	frw/gds2geo/gdsii/elements.py	/^class _Base(object):$/;"	c
+_COLROW	frw/gds2geo/gdsii/elements.py	/^_COLROW = _records.ColRowRecord('cols', 'rows')$/;"	v
+_ChoicesPseudoAction	frw/gds2geo/argparse.py	/^    class _ChoicesPseudoAction(Action):$/;"	c	class:_SubParsersAction
+_CountAction	frw/gds2geo/argparse.py	/^class _CountAction(Action):$/;"	c
+_DATATYPE	frw/gds2geo/gdsii/elements.py	/^_DATATYPE = _records.SimpleRecord('data_type', tags.DATATYPE)$/;"	v
+_ELFLAGS	frw/gds2geo/gdsii/elements.py	/^_ELFLAGS = _records.OptionalWholeRecord('elflags', tags.ELFLAGS)$/;"	v
+_ENDEXTN	frw/gds2geo/gdsii/elements.py	/^_ENDEXTN = _records.SimpleOptionalRecord('end_extn', tags.ENDEXTN)$/;"	v
+_FONTS	frw/gds2geo/gdsii/library.py	/^_FONTS = _records.OptionalWholeRecord('fonts', tags.FONTS)$/;"	v
+_FORMAT	frw/gds2geo/gdsii/library.py	/^_FORMAT = _records.FormatRecord('format', 'masks', tags.FORMAT)$/;"	v
+_GENERATIONS	frw/gds2geo/gdsii/library.py	/^_GENERATIONS = _records.SimpleOptionalRecord('generations', tags.GENERATIONS)$/;"	v
+_HEADER	frw/gds2geo/gdsii/library.py	/^_HEADER = _records.SimpleRecord('version', tags.HEADER)$/;"	v
+_HelpAction	frw/gds2geo/argparse.py	/^class _HelpAction(Action):$/;"	c
+_LAYER	frw/gds2geo/gdsii/elements.py	/^_LAYER = _records.SimpleRecord('layer', tags.LAYER)$/;"	v
+_LIBDIRSIZE	frw/gds2geo/gdsii/library.py	/^_LIBDIRSIZE = _records.SimpleOptionalRecord('libdirsize', tags.LIBDIRSIZE)$/;"	v
+_LIBNAME	frw/gds2geo/gdsii/library.py	/^_LIBNAME = _records.StringRecord('name', tags.LIBNAME)$/;"	v
+_LIBSECUR	frw/gds2geo/gdsii/library.py	/^_LIBSECUR = _records.ACLRecord('acls', tags.LIBSECUR)$/;"	v
+_MutuallyExclusiveGroup	frw/gds2geo/argparse.py	/^class _MutuallyExclusiveGroup(_ArgumentGroup):$/;"	c
+_NODETYPE	frw/gds2geo/gdsii/elements.py	/^_NODETYPE = _records.SimpleRecord('node_type', tags.NODETYPE)$/;"	v
+_PACK_FUNCS	frw/gds2geo/gdsii/record.py	/^_PACK_FUNCS = {$/;"	v
+_PARSE_FUNCS	frw/gds2geo/gdsii/record.py	/^_PARSE_FUNCS = {$/;"	v
+_PATHTYPE	frw/gds2geo/gdsii/elements.py	/^_PATHTYPE = _records.SimpleOptionalRecord('path_type', tags.PATHTYPE)$/;"	v
+_PLEX	frw/gds2geo/gdsii/elements.py	/^_PLEX = _records.SimpleOptionalRecord('plex', tags.PLEX)$/;"	v
+_PRESENTATION	frw/gds2geo/gdsii/elements.py	/^_PRESENTATION = _records.OptionalWholeRecord('presentation', tags.PRESENTATION)$/;"	v
+_PROPERTIES	frw/gds2geo/gdsii/elements.py	/^_PROPERTIES = _records.PropertiesRecord('properties')$/;"	v
+_RECORD_HEADER_FMT	frw/gds2geo/gdsii/record.py	/^_RECORD_HEADER_FMT = struct.Struct('>HH')$/;"	v
+_REFLIBS	frw/gds2geo/gdsii/library.py	/^_REFLIBS = _records.OptionalWholeRecord('reflibs', tags.REFLIBS)$/;"	v
+_SNAME	frw/gds2geo/gdsii/elements.py	/^_SNAME = _records.StringRecord('struct_name', tags.SNAME)$/;"	v
+_SRFNAME	frw/gds2geo/gdsii/library.py	/^_SRFNAME = _records.OptionalWholeRecord('srfname', tags.SRFNAME)$/;"	v
+_STRANS	frw/gds2geo/gdsii/elements.py	/^_STRANS = _records.STransRecord('strans', tags.STRANS)$/;"	v
+_STRCLASS	frw/gds2geo/gdsii/structure.py	/^_STRCLASS = _records.SimpleOptionalRecord('strclass', tags.STRCLASS)$/;"	v
+_STRING	frw/gds2geo/gdsii/elements.py	/^_STRING = _records.StringRecord('string', tags.STRING)$/;"	v
+_STRNAME	frw/gds2geo/gdsii/structure.py	/^_STRNAME = _records.StringRecord('name', tags.STRNAME)$/;"	v
+_Section	frw/gds2geo/argparse.py	/^    class _Section(object):$/;"	c	class:HelpFormatter
+_StoreAction	frw/gds2geo/argparse.py	/^class _StoreAction(Action):$/;"	c
+_StoreConstAction	frw/gds2geo/argparse.py	/^class _StoreConstAction(Action):$/;"	c
+_StoreFalseAction	frw/gds2geo/argparse.py	/^class _StoreFalseAction(_StoreConstAction):$/;"	c
+_StoreTrueAction	frw/gds2geo/argparse.py	/^class _StoreTrueAction(_StoreConstAction):$/;"	c
+_SubParsersAction	frw/gds2geo/argparse.py	/^class _SubParsersAction(Action):$/;"	c
+_TEXTTYPE	frw/gds2geo/gdsii/elements.py	/^_TEXTTYPE = _records.SimpleRecord('text_type', tags.TEXTTYPE)$/;"	v
+_UNITS	frw/gds2geo/gdsii/library.py	/^_UNITS = _records.UnitsRecord('logical_unit', 'physical_unit', tags.UNITS)$/;"	v
+_VersionAction	frw/gds2geo/argparse.py	/^class _VersionAction(Action):$/;"	c
+_WIDTH	frw/gds2geo/gdsii/elements.py	/^_WIDTH = _records.SimpleOptionalRecord('width', tags.WIDTH)$/;"	v
+_XY	frw/gds2geo/gdsii/elements.py	/^_XY = _records.XYRecord('xy', tags.XY)$/;"	v
+__all__	frw/gds2geo/argparse.py	/^__all__ = [$/;"	v
+__all__	frw/gds2geo/gdsii/elements.py	/^__all__ = ($/;"	v
+__all__	frw/gds2geo/gdsii/exceptions.py	/^__all__ = ('FormatError', 'EndOfFileError', 'IncorrectDataSize',$/;"	v
+__all__	frw/gds2geo/gdsii/record.py	/^__all__ = [$/;"	v
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:Action	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_AppendAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_AppendConstAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_CountAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_HelpAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_StoreAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_StoreConstAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_SubParsersAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, parser, namespace, values, option_string=None):$/;"	m	class:_VersionAction	file:
+__call__	frw/gds2geo/argparse.py	/^    def __call__(self, string):$/;"	m	class:FileType	file:
+__contains__	frw/gds2geo/argparse.py	/^    def __contains__(self, key):$/;"	m	class:Namespace	file:
+__eq__	frw/gds2geo/argparse.py	/^    def __eq__(self, other):$/;"	m	class:Namespace	file:
+__init__	frw/gds2geo/argparse.py	/^        def __init__(self, formatter, parent, heading=None):$/;"	m	class:HelpFormatter._Section
+__init__	frw/gds2geo/argparse.py	/^        def __init__(self, name, help):$/;"	m	class:_SubParsersAction._ChoicesPseudoAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self, **kwargs):$/;"	m	class:Namespace
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self, argument, message):$/;"	m	class:ArgumentError
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self, container, required=False):$/;"	m	class:_MutuallyExclusiveGroup
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self, container, title=None, description=None, **kwargs):$/;"	m	class:_ArgumentGroup
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self, mode='r', bufsize=None):$/;"	m	class:FileType
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:Action
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:ArgumentParser
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:HelpFormatter
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_ActionsContainer
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_AppendAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_AppendConstAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_CountAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_HelpAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_StoreAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_StoreConstAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_StoreFalseAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_StoreTrueAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_SubParsersAction
+__init__	frw/gds2geo/argparse.py	/^    def __init__(self,$/;"	m	class:_VersionAction
+__init__	frw/gds2geo/gdsii/_records.py	/^    def __init__(self, variable):$/;"	m	class:AbstractRecord
+__init__	frw/gds2geo/gdsii/_records.py	/^    def __init__(self, variable, gds_record):$/;"	m	class:SimpleRecord
+__init__	frw/gds2geo/gdsii/_records.py	/^    def __init__(self, variable1, variable2):$/;"	m	class:ColRowRecord
+__init__	frw/gds2geo/gdsii/_records.py	/^    def __init__(self, variable1, variable2, gds_record):$/;"	m	class:FormatRecord
+__init__	frw/gds2geo/gdsii/_records.py	/^    def __init__(self, variable1, variable2, gds_record):$/;"	m	class:TimestampsRecord
+__init__	frw/gds2geo/gdsii/_records.py	/^    def __init__(self, variable1, variable2, gds_record):$/;"	m	class:UnitsRecord
+__init__	frw/gds2geo/gdsii/_records.py	/^    def __init__(self, variable2):$/;"	m	class:SecondVar
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self):$/;"	m	class:_Base
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self, layer, box_type, xy):$/;"	m	class:Box
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self, layer, data_type, xy):$/;"	m	class:Boundary
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self, layer, data_type, xy):$/;"	m	class:Path
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self, layer, node_type, xy):$/;"	m	class:Node
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self, layer, text_type, xy, string):$/;"	m	class:Text
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self, struct_name, cols, rows, xy):$/;"	m	class:ARef
+__init__	frw/gds2geo/gdsii/elements.py	/^    def __init__(self, struct_name, xy):$/;"	m	class:SRef
+__init__	frw/gds2geo/gdsii/library.py	/^    def __init__(self, version, name, physical_unit, logical_unit, mod_time=None,$/;"	m	class:Library
+__init__	frw/gds2geo/gdsii/record.py	/^    def __init__(self, stream):$/;"	m	class:Reader
+__init__	frw/gds2geo/gdsii/record.py	/^    def __init__(self, tag, data=None, points=None, times=None, acls=None):$/;"	m	class:Record
+__init__	frw/gds2geo/gdsii/structure.py	/^    def __init__(self, name, mod_time=None, acc_time=None):$/;"	m	class:Structure
+__ne__	frw/gds2geo/argparse.py	/^    def __ne__(self, other):$/;"	m	class:Namespace	file:
+__repr__	frw/gds2geo/argparse.py	/^    def __repr__(self):$/;"	m	class:FileType	file:
+__repr__	frw/gds2geo/argparse.py	/^    def __repr__(self):$/;"	m	class:_AttributeHolder	file:
+__repr__	frw/gds2geo/gdsii/_records.py	/^    def __repr__(self):$/;"	m	class:AbstractRecord	file:
+__repr__	frw/gds2geo/gdsii/library.py	/^    def __repr__(self):$/;"	m	class:Library	file:
+__repr__	frw/gds2geo/gdsii/structure.py	/^    def __repr__(self):$/;"	m	class:Structure	file:
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ('layer', 'box_type', 'xy', 'elflags', 'plex', 'properties')$/;"	v	class:Box
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ('layer', 'data_type', 'xy', 'elflags', 'plex', 'path_type',$/;"	v	class:Path
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ('layer', 'data_type', 'xy', 'elflags', 'plex', 'properties')$/;"	v	class:Boundary
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ('layer', 'node_type', 'xy', 'elflags', 'plex', 'properties')$/;"	v	class:Node
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ('layer', 'text_type', 'xy', 'string', 'elflags', 'plex',$/;"	v	class:Text
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ('struct_name', 'cols', 'rows', 'xy', 'elflags', 'plex',$/;"	v	class:ARef
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ('struct_name', 'xy', 'elflags', 'strans', 'mag', 'angle',$/;"	v	class:SRef
+__slots__	frw/gds2geo/gdsii/elements.py	/^    __slots__ = ()$/;"	v	class:_Base
+__slots__	frw/gds2geo/gdsii/record.py	/^    __slots__  = ('current', 'stream')$/;"	v	class:Reader
+__slots__	frw/gds2geo/gdsii/record.py	/^    __slots__ = ['tag', 'data']$/;"	v	class:Record
+__str__	frw/gds2geo/argparse.py	/^    def __str__(self):$/;"	m	class:ArgumentError	file:
+__version__	frw/gds2geo/argparse.py	/^__version__ = '1.1'$/;"	v
+_add_action	frw/gds2geo/argparse.py	/^    def _add_action(self, action):$/;"	m	class:ArgumentParser
+_add_action	frw/gds2geo/argparse.py	/^    def _add_action(self, action):$/;"	m	class:_ActionsContainer
+_add_action	frw/gds2geo/argparse.py	/^    def _add_action(self, action):$/;"	m	class:_ArgumentGroup
+_add_action	frw/gds2geo/argparse.py	/^    def _add_action(self, action):$/;"	m	class:_MutuallyExclusiveGroup
+_add_container_actions	frw/gds2geo/argparse.py	/^    def _add_container_actions(self, container):$/;"	m	class:_ActionsContainer
+_add_item	frw/gds2geo/argparse.py	/^    def _add_item(self, func, args):$/;"	m	class:HelpFormatter
+_all_elements	frw/gds2geo/gdsii/elements.py	/^_all_elements = (Boundary, Path, SRef, ARef, Text, Node, Box)$/;"	v
+_basestring	frw/gds2geo/argparse.py	/^    _basestring = basestring$/;"	v
+_basestring	frw/gds2geo/argparse.py	/^    _basestring = str$/;"	v
+_callable	frw/gds2geo/argparse.py	/^def _callable(obj):$/;"	f
+_check_conflict	frw/gds2geo/argparse.py	/^    def _check_conflict(self, action):$/;"	m	class:_ActionsContainer
+_check_value	frw/gds2geo/argparse.py	/^    def _check_value(self, action, value):$/;"	m	class:ArgumentParser
+_dedent	frw/gds2geo/argparse.py	/^    def _dedent(self):$/;"	m	class:HelpFormatter
+_ensure_value	frw/gds2geo/argparse.py	/^def _ensure_value(namespace, name, value):$/;"	f
+_expand_help	frw/gds2geo/argparse.py	/^    def _expand_help(self, action):$/;"	m	class:HelpFormatter
+_fill_text	frw/gds2geo/argparse.py	/^    def _fill_text(self, text, width, indent):$/;"	m	class:HelpFormatter
+_fill_text	frw/gds2geo/argparse.py	/^    def _fill_text(self, text, width, indent):$/;"	m	class:RawDescriptionHelpFormatter
+_format_action	frw/gds2geo/argparse.py	/^    def _format_action(self, action):$/;"	m	class:HelpFormatter
+_format_action_invocation	frw/gds2geo/argparse.py	/^    def _format_action_invocation(self, action):$/;"	m	class:HelpFormatter
+_format_actions_usage	frw/gds2geo/argparse.py	/^    def _format_actions_usage(self, actions, groups):$/;"	m	class:HelpFormatter
+_format_args	frw/gds2geo/argparse.py	/^    def _format_args(self, action, default_metavar):$/;"	m	class:HelpFormatter
+_format_text	frw/gds2geo/argparse.py	/^    def _format_text(self, text):$/;"	m	class:HelpFormatter
+_format_usage	frw/gds2geo/argparse.py	/^    def _format_usage(self, usage, actions, groups, prefix):$/;"	m	class:HelpFormatter
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = (_ELFLAGS, _PLEX, _LAYER, _BOXTYPE, _XY, _PROPERTIES)$/;"	v	class:Box
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = (_ELFLAGS, _PLEX, _LAYER, _DATATYPE, _PATHTYPE, _WIDTH,$/;"	v	class:Path
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = (_ELFLAGS, _PLEX, _LAYER, _DATATYPE, _XY, _PROPERTIES)$/;"	v	class:Boundary
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = (_ELFLAGS, _PLEX, _LAYER, _NODETYPE, _XY, _PROPERTIES)$/;"	v	class:Node
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = (_ELFLAGS, _PLEX, _LAYER, _TEXTTYPE, _PRESENTATION, _PATHTYPE,$/;"	v	class:Text
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = (_ELFLAGS, _PLEX, _SNAME, _STRANS, _COLROW, _XY, _PROPERTIES)$/;"	v	class:ARef
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = (_ELFLAGS, _PLEX, _SNAME, _STRANS, _XY, _PROPERTIES)$/;"	v	class:SRef
+_gds_objs	frw/gds2geo/gdsii/elements.py	/^    _gds_objs = None$/;"	v	class:_Base
+_gds_objs	frw/gds2geo/gdsii/library.py	/^    _gds_objs = (_HEADER, _BGNLIB, _LIBDIRSIZE, _SRFNAME, _LIBSECUR, _LIBNAME, _REFLIBS,$/;"	v	class:Library
+_gds_objs	frw/gds2geo/gdsii/structure.py	/^    _gds_objs = (_BGNSTR, _STRNAME, _STRCLASS)$/;"	v	class:Structure
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = None$/;"	v	class:_Base
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = tags.AREF$/;"	v	class:ARef
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = tags.BOUNDARY$/;"	v	class:Boundary
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = tags.BOX$/;"	v	class:Box
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = tags.NODE$/;"	v	class:Node
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = tags.PATH$/;"	v	class:Path
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = tags.SREF$/;"	v	class:SRef
+_gds_tag	frw/gds2geo/gdsii/elements.py	/^    _gds_tag = tags.TEXT$/;"	v	class:Text
+_get_action_name	frw/gds2geo/argparse.py	/^def _get_action_name(argument):$/;"	f
+_get_args	frw/gds2geo/argparse.py	/^    def _get_args(self):$/;"	m	class:_AttributeHolder
+_get_formatter	frw/gds2geo/argparse.py	/^    def _get_formatter(self):$/;"	m	class:ArgumentParser
+_get_handler	frw/gds2geo/argparse.py	/^    def _get_handler(self):$/;"	m	class:_ActionsContainer
+_get_help_string	frw/gds2geo/argparse.py	/^    def _get_help_string(self, action):$/;"	m	class:ArgumentDefaultsHelpFormatter
+_get_help_string	frw/gds2geo/argparse.py	/^    def _get_help_string(self, action):$/;"	m	class:HelpFormatter
+_get_kwargs	frw/gds2geo/argparse.py	/^    def _get_kwargs(self):$/;"	m	class:Action
+_get_kwargs	frw/gds2geo/argparse.py	/^    def _get_kwargs(self):$/;"	m	class:ArgumentParser
+_get_kwargs	frw/gds2geo/argparse.py	/^    def _get_kwargs(self):$/;"	m	class:_AttributeHolder
+_get_nargs_pattern	frw/gds2geo/argparse.py	/^    def _get_nargs_pattern(self, action):$/;"	m	class:ArgumentParser
+_get_option_tuples	frw/gds2geo/argparse.py	/^    def _get_option_tuples(self, option_string):$/;"	m	class:ArgumentParser
+_get_optional_actions	frw/gds2geo/argparse.py	/^    def _get_optional_actions(self):$/;"	m	class:ArgumentParser
+_get_optional_kwargs	frw/gds2geo/argparse.py	/^    def _get_optional_kwargs(self, *args, **kwargs):$/;"	m	class:_ActionsContainer
+_get_positional_actions	frw/gds2geo/argparse.py	/^    def _get_positional_actions(self):$/;"	m	class:ArgumentParser
+_get_positional_kwargs	frw/gds2geo/argparse.py	/^    def _get_positional_kwargs(self, dest, **kwargs):$/;"	m	class:_ActionsContainer
+_get_subactions	frw/gds2geo/argparse.py	/^    def _get_subactions(self):$/;"	m	class:_SubParsersAction
+_get_value	frw/gds2geo/argparse.py	/^    def _get_value(self, action, arg_string):$/;"	m	class:ArgumentParser
+_get_values	frw/gds2geo/argparse.py	/^    def _get_values(self, action, arg_strings):$/;"	m	class:ArgumentParser
+_handle_conflict_error	frw/gds2geo/argparse.py	/^    def _handle_conflict_error(self, action, conflicting_actions):$/;"	m	class:_ActionsContainer
+_handle_conflict_resolve	frw/gds2geo/argparse.py	/^    def _handle_conflict_resolve(self, action, conflicting_actions):$/;"	m	class:_ActionsContainer
+_indent	frw/gds2geo/argparse.py	/^    def _indent(self):$/;"	m	class:HelpFormatter
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:ARef
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:Boundary
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:Box
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:Node
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:Path
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:SRef
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:Text
+_init_optional	frw/gds2geo/gdsii/elements.py	/^    def _init_optional(self):$/;"	m	class:_Base
+_init_optional	frw/gds2geo/gdsii/library.py	/^    def _init_optional(self):$/;"	m	class:Library
+_init_optional	frw/gds2geo/gdsii/structure.py	/^    def _init_optional(self):$/;"	m	class:Structure
+_int_to_real	frw/gds2geo/gdsii/record.py	/^def _int_to_real(num):$/;"	f
+_iter_indented_subactions	frw/gds2geo/argparse.py	/^    def _iter_indented_subactions(self, action):$/;"	m	class:HelpFormatter
+_join_parts	frw/gds2geo/argparse.py	/^    def _join_parts(self, part_strings):$/;"	m	class:HelpFormatter
+_load	frw/gds2geo/gdsii/elements.py	/^    def _load(cls, gen):$/;"	m	class:_Base
+_load	frw/gds2geo/gdsii/structure.py	/^    def _load(cls, gen):$/;"	m	class:Structure
+_match_argument	frw/gds2geo/argparse.py	/^    def _match_argument(self, action, arg_strings_pattern):$/;"	m	class:ArgumentParser
+_match_arguments_partial	frw/gds2geo/argparse.py	/^    def _match_arguments_partial(self, actions, arg_strings_pattern):$/;"	m	class:ArgumentParser
+_metavar_formatter	frw/gds2geo/argparse.py	/^    def _metavar_formatter(self, action, default_metavar):$/;"	m	class:HelpFormatter
+_pack_ascii	frw/gds2geo/gdsii/record.py	/^def _pack_ascii(data):$/;"	f
+_pack_bitarray	frw/gds2geo/gdsii/record.py	/^def _pack_bitarray(data):$/;"	f
+_pack_int2	frw/gds2geo/gdsii/record.py	/^def _pack_int2(data):$/;"	f
+_pack_int4	frw/gds2geo/gdsii/record.py	/^def _pack_int4(data):$/;"	f
+_pack_nodata	frw/gds2geo/gdsii/record.py	/^def _pack_nodata(data):$/;"	f
+_pack_real8	frw/gds2geo/gdsii/record.py	/^def _pack_real8(data):$/;"	f
+_parse_ascii	frw/gds2geo/gdsii/record.py	/^def _parse_ascii(data):$/;"	f
+_parse_bitarray	frw/gds2geo/gdsii/record.py	/^def _parse_bitarray(data):$/;"	f
+_parse_int2	frw/gds2geo/gdsii/record.py	/^def _parse_int2(data):$/;"	f
+_parse_int4	frw/gds2geo/gdsii/record.py	/^def _parse_int4(data):$/;"	f
+_parse_known_args	frw/gds2geo/argparse.py	/^    def _parse_known_args(self, arg_strings, namespace):$/;"	m	class:ArgumentParser
+_parse_nodata	frw/gds2geo/gdsii/record.py	/^def _parse_nodata(data):$/;"	f
+_parse_optional	frw/gds2geo/argparse.py	/^    def _parse_optional(self, arg_string):$/;"	m	class:ArgumentParser
+_parse_real8	frw/gds2geo/gdsii/record.py	/^def _parse_real8(data):$/;"	f
+_pop_action_class	frw/gds2geo/argparse.py	/^    def _pop_action_class(self, kwargs, default=None):$/;"	m	class:_ActionsContainer
+_print_message	frw/gds2geo/argparse.py	/^    def _print_message(self, message, file=None):$/;"	m	class:ArgumentParser
+_read_args_from_files	frw/gds2geo/argparse.py	/^    def _read_args_from_files(self, arg_strings):$/;"	m	class:ArgumentParser
+_read_element	frw/gds2geo/gdsii/elements.py	/^    def _read_element(cls, gen):$/;"	m	class:_Base
+_real_to_int	frw/gds2geo/gdsii/record.py	/^def _real_to_int(fnum):$/;"	f
+_registry_get	frw/gds2geo/argparse.py	/^    def _registry_get(self, registry_name, value, default=None):$/;"	m	class:_ActionsContainer
+_remove_action	frw/gds2geo/argparse.py	/^    def _remove_action(self, action):$/;"	m	class:_ActionsContainer
+_remove_action	frw/gds2geo/argparse.py	/^    def _remove_action(self, action):$/;"	m	class:_ArgumentGroup
+_remove_action	frw/gds2geo/argparse.py	/^    def _remove_action(self, action):$/;"	m	class:_MutuallyExclusiveGroup
+_save	frw/gds2geo/gdsii/elements.py	/^    def _save(self, stream):$/;"	m	class:_Base
+_save	frw/gds2geo/gdsii/structure.py	/^    def _save(self, stream):$/;"	m	class:Structure
+_set	frw/gds2geo/argparse.py	/^    _set = set$/;"	v
+_sorted	frw/gds2geo/argparse.py	/^    _sorted = sorted$/;"	v
+_sorted	frw/gds2geo/argparse.py	/^    def _sorted(iterable, reverse=False):$/;"	f
+_split_lines	frw/gds2geo/argparse.py	/^    def _split_lines(self, text, width):$/;"	m	class:HelpFormatter
+_split_lines	frw/gds2geo/argparse.py	/^    def _split_lines(self, text, width):$/;"	m	class:RawTextHelpFormatter
+absorbCommonSupport	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGLList::absorbCommonSupport()$/;"	f	class:RectangleGLList
+absorbCommonSupport	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGLList::absorbCommonSupport(RectangleGLList::IteratorList &itList)$/;"	f	class:RectangleGLList
+acls	frw/gds2geo/gdsii/record.py	/^    def acls(self):$/;"	m	class:Record
+add_argument	frw/gds2geo/argparse.py	/^    def add_argument(self, *args, **kwargs):$/;"	m	class:_ActionsContainer
+add_argument	frw/gds2geo/argparse.py	/^    def add_argument(self, action):$/;"	m	class:HelpFormatter
+add_argument_group	frw/gds2geo/argparse.py	/^    def add_argument_group(self, *args, **kwargs):$/;"	m	class:_ActionsContainer
+add_arguments	frw/gds2geo/argparse.py	/^    def add_arguments(self, actions):$/;"	m	class:HelpFormatter
+add_mutually_exclusive_group	frw/gds2geo/argparse.py	/^    def add_mutually_exclusive_group(self, **kwargs):$/;"	m	class:_ActionsContainer
+add_parser	frw/gds2geo/argparse.py	/^    def add_parser(self, name, **kwargs):$/;"	m	class:_SubParsersAction
+add_subparsers	frw/gds2geo/argparse.py	/^    def add_subparsers(self, **kwargs):$/;"	m	class:ArgumentParser
+add_text	frw/gds2geo/argparse.py	/^    def add_text(self, text):$/;"	m	class:HelpFormatter
+add_usage	frw/gds2geo/argparse.py	/^    def add_usage(self, usage, actions, groups, prefix=None):$/;"	m	class:HelpFormatter
+angle	frw/gds2geo/gdsii/_records.py	/^    angle = SimpleOptionalRecord('angle', tags.ANGLE)$/;"	v	class:STransRecord
+area	frw/FRWcapext.cpp	/^double GaussianSurface2d::area(){$/;"	f	class:GaussianSurface2d
+area	frw/geo2condlist/gdsgeometry.cpp	/^double Rectangle::area() const{$/;"	f	class:Rectangle
+bem	bem.cc	/^int bem(map<int, Net*>nets, map<int, Net*>::iterator nets_iter, Boundary boundary, double dielectric, double shrink_val)$/;"	f
+borders	common.h	/^		list<Border> borders; $/;"	m	class:Net
+boundary2point	frw/gds2geo/caplet_gds2geo.py	/^def boundary2point(boundary):$/;"	f
+boundary_hi_coord	fdm.cc	/^        double boundary_hi_coord;$/;"	m	class:Sentry	file:
+boundary_lo_coord	fdm.cc	/^        double boundary_lo_coord;$/;"	m	class:Sentry	file:
+bring2front	frw/geo2condlist/geoloader.cpp	/^void bring2front(Polygon &poly, Polygon::iterator &marker){$/;"	f
+candidateCellList	frw/spacemanagement.h	/^	list<Cell2d*> candidateCellList;$/;"	m	class:Cell2d
+candidateCheck2d	frw/spacemanagement.cpp	/^void candidateCheck2d(Subnet subCond,  Cell2d &cellT){$/;"	f
+candidateList2d	frw/spacemanagement.h	/^	SubConductorList2d candidateList2d;$/;"	m	class:Cell2d
+candidateListOfRootCell2d	frw/spacemanagement.h	/^	SubConductorList2d candidateListOfRootCell2d;$/;"	m	class:Cell2d
+cap	common.h	/^        double cap;  \/\/ net cap, the final result$/;"	m	class:Net
+capMatrix	frw/FRWcapext.h	/^	static CapacitanceMatrix capMatrix;$/;"	m	class:FRWControl
+capMatrix	frw/FRWcapext.h	/^CapacitanceMatrix FRWControl::capMatrix;\/\/= CapacitanceMatrix();$/;"	m	class:FRWControl
+capacitance	frw/FRWcapext.h	/^	double capacitance;$/;"	m	class:Capacitance
+capacitanceMatrix	frw/geo2condlist/geoloader.h	/^    Matrix_frw capacitanceMatrix;$/;"	m	class:ExtractionInfo
+caplet	frw/geo2condlist/debug.h	/^namespace caplet{$/;"	n
+centerPoint	frw/spacemanagement.h	/^	FPoint2d centerPoint;$/;"	m	class:Cell2d
+checkSelfOverlapping	frw/geo2condlist/gdsgeometry.cpp	/^bool Conductor::checkSelfOverlapping(const int *const *viaConnect)$/;"	f	class:Conductor
+checkZeroAreaRectangle	frw/geo2condlist/gdsgeometry.cpp	/^bool Conductor::checkZeroAreaRectangle()$/;"	f	class:Conductor
+check_size	frw/gds2geo/gdsii/record.py	/^    def check_size(self, size):$/;"	m	class:Record
+check_tag	frw/gds2geo/gdsii/record.py	/^    def check_tag(self, tag):$/;"	m	class:Record
+cholmod_solver	fdm.cc	/^int cholmod_solver(size_t Nx, size_t Nz, size_t NN, size_t Nb, size_t Nb_net0, $/;"	f
+clear	frw/geo2condlist/geoloader.cpp	/^void GeoLoader::clear(){$/;"	f	class:GeoLoader
+common	common.h	/^		double common; \/\/ common coordinate between the two border points; it is the x-coordinate if dir is 0$/;"	m	class:Border
+computeAdjacency	frw/geo2condlist/geoloader.cpp	/^void computeAdjacency(const RectangleList               &rectList,$/;"	f
+compute_charge_3	fdm.cc	/^double compute_charge_3(int lo_x, int lo_z, int hi_x, int hi_z, int Nz,$/;"	f
+conductor2d	frw/geo2condlist/gdsgeometry.h	/^    Conductor2d conductor2d;$/;"	m	class:OneConduct
+conductorList2d	frw/FRWcapext.h	/^	static map<int, Net*>  conductorList2d;$/;"	m	class:FRWControl
+conductorList2d	frw/FRWcapext.h	/^map<int, Net*>  FRWControl::conductorList2d;$/;"	m	class:FRWControl
+conductorList2dMove	frw/FRWcapext.h	/^	static ConductorList2d  conductorList2dMove;$/;"	m	class:FRWControl
+conductorList2dMove	frw/FRWcapext.h	/^ConductorList2d FRWControl::conductorList2dMove;$/;"	m	class:FRWControl
+constructFrom	frw/geo2condlist/gdsgeometry.cpp	/^void ConductorFPList::constructFrom(const ConductorList &condList, const float unit)$/;"	f	class:ConductorFPList
+consume_optional	frw/gds2geo/argparse.py	/^        def consume_optional(start_index):$/;"	f	function:ArgumentParser._parse_known_args
+consume_positionals	frw/gds2geo/argparse.py	/^        def consume_positionals(start_index):$/;"	f	function:ArgumentParser._parse_known_args
+convert_arg_line_to_args	frw/gds2geo/argparse.py	/^    def convert_arg_line_to_args(self, arg_line):$/;"	m	class:ArgumentParser
+convertcondlist	frw/FRWcapext.cpp	/^void convertcondlist(map<int, Net*> condList)$/;"	f
+copy	frw/FRWcapext.cpp	/^void copy(ofstream &fout, string &filename ){$/;"	f
+currentNumOfWalkOfCond	frw/FRWcapext.h	/^	static vector<long> currentNumOfWalkOfCond;$/;"	m	class:FRWControl
+currentNumOfWalkOfCond	frw/FRWcapext.h	/^vector<long> FRWControl::currentNumOfWalkOfCond;$/;"	m	class:FRWControl
+currentProcessorIndex	frw/FRWcapext.h	/^	static int currentProcessorIndex;$/;"	m	class:FRWControl
+currentProcessorIndex	frw/FRWcapext.h	/^int FRWControl::currentProcessorIndex=0;$/;"	m	class:FRWControl
+currentProgressOfCond	frw/FRWcapext.h	/^	static vector<long> currentProgressOfCond;$/;"	m	class:FRWControl
+currentProgressOfCond	frw/FRWcapext.h	/^vector<long> FRWControl::currentProgressOfCond;$/;"	m	class:FRWControl
+currentThreadIndex	frw/FRWcapext.h	/^	static int currentThreadIndex;$/;"	m	class:FRWControl
+currentThreadIndex	frw/FRWcapext.h	/^int FRWControl::currentThreadIndex=0;$/;"	m	class:FRWControl
+cut	frw/geo2condlist/geoloader.cpp	/^PolygonList cut(Polygon &poly, Polygon::iterator cutPointIt){$/;"	f
+dbl_cmp	common.h	/^    dbl_cmp(double v, double d) : val(v), delta(d) { }$/;"	f	struct:dbl_cmp
+dbl_cmp	common.h	/^struct dbl_cmp {$/;"	s
+dbl_equ	common.h	/^bool dbl_equ(double src, double dst) {$/;"	f
+decompose	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleList::decompose(){$/;"	f	class:RectangleList
+decomposeXdir	frw/geo2condlist/gdsgeometry.cpp	/^void decomposeXdir(Rectangle& rectI, Rectangle &rectJ, RectangleList &decomposedRectJ){$/;"	f
+decomposeYdir	frw/geo2condlist/gdsgeometry.cpp	/^void decomposeYdir(Rectangle& rectI, Rectangle &rectJ, RectangleList &decomposedRectJ){$/;"	f
+delta	common.h	/^    double val, delta;$/;"	m	struct:dbl_cmp
+depthOfOctreeFromRoot	frw/spacemanagement.h	/^int depthOfOctreeFromRoot=4;$/;"	v
+depthOfOctreeFromRoot2d	frw/spacemanagement.h	/^int depthOfOctreeFromRoot2d=4;$/;"	v
+depthOfOctreeFromSubGrid	frw/spacemanagement.h	/^int depthOfOctreeFromSubGrid=0;$/;"	v
+depthOfOctreeFromSubGrid2d	frw/spacemanagement.h	/^int depthOfOctreeFromSubGrid2d=0;$/;"	v
+derive_cofficient	fdm.cc	/^void derive_cofficient(double &aa, double &al, double &ar, double &au, double &ad,$/;"	f
+dielectricConstant	frw/FRWcapext.h	/^	static double dielectricConstant;$/;"	m	class:FRWControl
+dielectricConstant	frw/FRWcapext.h	/^double FRWControl::dielectricConstant=3.9*8.85\/1000;        \/\/unit: pF\/mz$/;"	m	class:FRWControl
+dir	frw/geo2condlist/gdsgeometry.h	/^    Dir dir;$/;"	m	class:Point
+distanceLimit	frw/spacemanagement.h	/^	double distanceLimit;$/;"	m	class:Cell2d
+distanceToGdsBorder2d	frw/FRWcapext.cpp	/^int distanceToGdsBorder2d( Subnet rectA ,int normalDirect ){$/;"	f
+divideIntoSubCell	frw/spacemanagement.cpp	/^void Cell2d::divideIntoSubCell( double extension){$/;"	f	class:Cell2d
+dominate2d	frw/spacemanagement.cpp	/^bool dominate2d(Subnet rectA ,Subnet rectB, Cell2d &cellT)$/;"	f
+dx	fdm.cc	/^const double dx = 0.2;             \/\/ uniform spacing$/;"	v
+dx_1_10	fdm.cc	/^const double dx_1_10 = dx \/ 10;    \/\/ spacing of out boundary$/;"	v
+dx_1_100	fdm.cc	/^const double dx_1_100 = dx \/ 100;  \/\/ minimum spacing of net boundary$/;"	v
+dz	fdm.cc	/^const double dz = 0.2;             \/\/ uniform spacing$/;"	v
+dz_1_10	fdm.cc	/^const double dz_1_10 = dz \/ 10;    \/\/ spacing of out boundary$/;"	v
+dz_1_100	fdm.cc	/^const double dz_1_100 = dz \/ 100;  \/\/ minimum spacing of net boundary$/;"	v
+e0	common.h	/^const double e0 = 0.008854;$/;"	v
+eigen_solver	bem.cc	/^int eigen_solver(map<int, Net*>nets, map<int, Net*>::iterator nets_iter, int num_tot,$/;"	f
+end	common.h	/^		double end;   \/\/ it is the y-coordinate of the up point if dir is 0$/;"	m	class:Border
+end_section	frw/gds2geo/argparse.py	/^    def end_section(self):$/;"	m	class:HelpFormatter
+enum	frw/gds2geo/caplet_gds2geo.py	/^def enum(*sequential, **named):$/;"	f
+eps	common.h	/^const double eps = 1e-6;$/;"	v
+error	frw/gds2geo/argparse.py	/^    def error(self, message):$/;"	m	class:ArgumentParser
+error	frw/geo2condlist/geoloader.h	/^    float error;$/;"	m	class:ExtractionInfo
+estimateErr	frw/FRWcapext.h	/^	double estimateErr;$/;"	m	class:Capacitance
+exit	frw/gds2geo/argparse.py	/^    def exit(self, status=0, message=None):$/;"	m	class:ArgumentParser
+extend	frw/geo2condlist/geoloader.cpp	/^PolygonList extend(Polygon& poly, Polygon::iterator extensionPointIt,$/;"	f
+extensionDis	frw/FRWcapext.h	/^	std::vector<double> extensionDis;$/;"	m	class:GaussianSurface2d
+extensionSize	frw/spacemanagement.h	/^	double extensionSize;$/;"	m	class:Cell2d
+extractionInfoList	frw/geo2condlist/geoloader.h	/^    ExtractionInfoList extractionInfoList;$/;"	m	class:GeoLoader
+fatherConductorID	frw/geo2condlist/gdsgeometry.h	/^    int fatherConductorID;$/;"	m	class:SubConductor
+fdm	fdm.cc	/^int fdm(map<int, Net*> nets, map<int, Net*>::iterator nets_iter, Boundary boundary, $/;"	f
+fileName	frw/geo2condlist/geoloader.h	/^    std::string fileName;$/;"	m	class:GeoLoader
+flag	common.h	/^		int flag;     \/\/ 0 - bottom to up; 1 - left to right; 2 - up to bottom; 3 right to left$/;"	m	class:Border
+format	frw/gds2geo/argparse.py	/^        def format(tuple_size):$/;"	f	function:HelpFormatter._metavar_formatter
+format_help	frw/gds2geo/argparse.py	/^        def format_help(self):$/;"	m	class:HelpFormatter._Section
+format_help	frw/gds2geo/argparse.py	/^    def format_help(self):$/;"	m	class:ArgumentParser
+format_help	frw/gds2geo/argparse.py	/^    def format_help(self):$/;"	m	class:HelpFormatter
+format_usage	frw/gds2geo/argparse.py	/^    def format_usage(self):$/;"	m	class:ArgumentParser
+format_version	frw/gds2geo/argparse.py	/^    def format_version(self):$/;"	m	class:ArgumentParser
+frw	frw/frw.cc	/^int frw(map<int, Net*> generateConductorList, Boundary GDS_zone, double dielectric)$/;"	f
+gauss_x0	common.h	/^		double gauss_x0, gauss_x1, gauss_z0, gauss_z1;$/;"	m	class:Subnet
+gauss_x1	common.h	/^		double gauss_x0, gauss_x1, gauss_z0, gauss_z1;$/;"	m	class:Subnet
+gauss_z0	common.h	/^		double gauss_x0, gauss_x1, gauss_z0, gauss_z1;$/;"	m	class:Subnet
+gauss_z1	common.h	/^		double gauss_x0, gauss_x1, gauss_z0, gauss_z1;$/;"	m	class:Subnet
+gaussianSurfaceList	frw/geo2condlist/gdsgeometry.h	/^    GaussianSurfaceList gaussianSurfaceList;$/;"	m	class:Conductor
+gaussianSurfaceList	frw/geo2condlist/gdsgeometry.h	/^    GaussianSurfaceList2d gaussianSurfaceList;$/;"	m	class:Conductor2d
+generate3dRects	frw/geo2condlist/geoloader.cpp	/^void generate3dRects(const RectangleList    &rect2dList,$/;"	f
+generateBGS	frw/FRWcapext.cpp	/^GaussianSurface2d generateBGS( Subnet subCond, TestList condList , double scale_factor )$/;"	f
+generateCapMatrix	frw/FRWcapext.cpp	/^CapacitanceMatrix generateCapMatrix(  TestList &condList ){$/;"	f
+generateConductorList	frw/geo2condlist/geoloader.cpp	/^ConductorList& GeoLoader::generateConductorList(ConductorList &conductorList, bool flagDecomposed)$/;"	f	class:GeoLoader
+generateConnectedRects	frw/geo2condlist/geoloader.cpp	/^void generateConnectedRects( RectangleList &rectList, ConnectedRectangleList &rectListList ){$/;"	f
+generateGaussianSurfaceOfConductor	frw/FRWcapext.cpp	/^void generateGaussianSurfaceOfConductor( TestList &condList, double scale_factor  )$/;"	f
+generateGridOctree	frw/spacemanagement.cpp	/^void generateGridOctree( GridOctree2d &gridOctree2d,  int gridCellSize ,Boundary GDS_zone ,map<int, Net*> generateConductorList, TestList &condList){$/;"	f
+generateMaxCubeTime	frw/FRWcapext.h	/^double generateMaxCubeTime=0;$/;"	v
+generateMaxTransitionCube	frw/FRWcapext.cpp	/^void generateMaxTransitionCube( Face &maxCube, Cell2d* &rootCell, Cell2d* &leafCell,  FPoint2d &p, GridOctree2d &gridOctree, int &normalDirOfCube ){$/;"	f
+generateMaxTransitionCube	frw/FRWcapext.cpp	/^void generateMaxTransitionCube(Face &maxCube, FPoint2d &p, Cell2d* &cell ){$/;"	f
+generatePointOnCubeSurface	frw/FRWcapext.cpp	/^void generatePointOnCubeSurface( FPoint2d &fp,  FPoint2d &point2d,  Face &cube , vector<double> &GreenVT ,$/;"	f
+generatePointOnCubeSurface	frw/FRWcapext.cpp	/^void generatePointOnCubeSurface(FPoint2d &pointOnCube, FPoint2d &point2d,  Face &cube  ,int &normalDirOfCube , vector<double> &GreenVT ,\/\/this green$/;"	f
+generatePointTime	frw/FRWcapext.h	/^double generatePointTime=0;$/;"	v
+generateVia	frw/geo2condlist/gdsgeometry.cpp	/^void Conductor::generateVia($/;"	f	class:Conductor
+generate_boundary_elements	bem.cc	/^int generate_boundary_elements(double el, vector<double>&xk, vector<double>&zk, vector<double>&xm, vector<double>&zm,$/;"	f
+generate_elements	bem.cc	/^int generate_elements(int flag, double common, double start, double end, double el, vector<double>&xk, vector<double>&zk,$/;"	f
+generate_grids_2	fdm.cc	/^void generate_grids_2(vector<double> &grids, vector<double> nets, double lo, double hi)$/;"	f
+generate_net_elements	bem.cc	/^int generate_net_elements(double el, vector<double>&xk, vector<double>&zk, vector<double>&xm, vector<double>&zm,$/;"	f
+geometryConductorFPList	frw/geo2condlist/geoloader.h	/^    ConductorFPList         geometryConductorFPList;$/;"	m	class:GeoLoader
+geometryConductorList	frw/geo2condlist/geoloader.h	/^    ConductorList           geometryConductorList;$/;"	m	class:GeoLoader
+getCondIndexByID	frw/FRWcapext.cpp	/^int getCondIndexByID( TestList &condList , int net_name){$/;"	f
+getExtDir	frw/geo2condlist/geoloader.cpp	/^inline Dir getExtDir( Point &p1, Point &p2){$/;"	f
+getGeometryConductorList	frw/geo2condlist/geoloader.cpp	/^const ConductorFPList &GeoLoader::getGeometryConductorList(const float unit)$/;"	f	class:GeoLoader
+getNormalDirOfPoint	frw/FRWcapext.cpp	/^int GaussianSurface2d::getNormalDirOfPoint(FPoint2d  &point){$/;"	f	class:GaussianSurface2d
+getNumberOfConductor	frw/geo2condlist/geoloader.cpp	/^size_t GeoLoader::getNumberOfConductor() const {$/;"	f	class:GeoLoader
+getRandSeed_mutex	frw/FRWcapext.h	/^pthread_mutex_t getRandSeed_mutex;$/;"	v
+get_default	frw/gds2geo/argparse.py	/^    def get_default(self, dest):$/;"	m	class:_ActionsContainer
+get_lines	frw/gds2geo/argparse.py	/^                def get_lines(parts, indent, prefix=None):$/;"	f	function:HelpFormatter._format_usage
+greenFuncProgression_NX	frw/FRWcapext.h	/^const int greenFuncProgression_NX=3;\/\/\/\/??5$/;"	v
+greenFuncProgression_NY	frw/FRWcapext.h	/^const int greenFuncProgression_NY=3;\/\/\/\/??5$/;"	v
+greenFunctionForElectricField	frw/FRWcapext.cpp	/^double greenFunctionForElectricField(  Face &cube,  FPoint2d &p,  int normalDirOfVGS, int normalDirOfCube ,vector<double> &GExVT, vector<double>  &GEzVT  ){	$/;"	f
+gridCellSize	frw/spacemanagement.h	/^	static int gridCellSize;$/;"	m	class:GridOctree2d
+gridCellSize	frw/spacemanagement.h	/^int GridOctree2d::gridCellSize=1*1000 ;\/\/320$/;"	m	class:GridOctree2d
+gridOctree2d	frw/FRWcapext.h	/^	static GridOctree2d gridOctree2d;$/;"	m	class:FRWControl
+gridOctree2d	frw/FRWcapext.h	/^GridOctree2d FRWControl::gridOctree2d;\/\/= GridOctree2d();$/;"	m	class:FRWControl
+hasChildCell	frw/spacemanagement.h	/^	bool hasChildCell;$/;"	m	class:Cell2d
+hasCommonSupport	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGLList::hasCommonSupport() const$/;"	f	class:RectangleGLList
+hasCornerInside	frw/geo2condlist/gdsgeometry.cpp	/^bool Rectangle::hasCornerInside ( const Rectangle &rect ) const{$/;"	f	class:Rectangle
+height	common.h	/^        double height;$/;"	m	class:Boundary
+height	common.h	/^        double height;$/;"	m	class:Subnet
+helpInfo	common.h	/^const std::string helpInfo = $/;"	v
+hi_idx	fdm.cc	/^        unsigned int hi_idx;$/;"	m	class:Sentry	file:
+hi_val	fdm.cc	/^double Sentry::hi_val() {$/;"	f	class:Sentry
+hi_x	common.h	/^        unsigned int lo_x, lo_z, hi_x, hi_z; $/;"	m	class:Net
+hi_z	common.h	/^        unsigned int lo_x, lo_z, hi_x, hi_z; $/;"	m	class:Net
+hitTime	frw/FRWcapext.h	/^long hitTime=0;$/;"	v
+identity	frw/gds2geo/argparse.py	/^        def identity(string):$/;"	f	function:ArgumentParser.__init__
+inc	fdm.cc	/^void Sentry::inc()$/;"	f	class:Sentry
+inc_multiple	fdm.cc	/^const double inc_multiple = 1.5;   \/\/ multiples of spacing increment$/;"	v
+innerDecompose	frw/geo2condlist/gdsgeometry.cpp	/^Rectangle innerDecompose(RectangleList &rectList, RectangleList::iterator &thisRectIt, Rectangle viaRect){$/;"	f
+insert	common.h	/^void Net::insert(double a, double b, double c, double d, int Net_name)$/;"	f	class:Net
+insertProjectedOverlappingRectangleGL	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGLList::IteratorList RectangleGLList::insertProjectedOverlappingRectangleGL(const RectangleGL &rect, const float distance)$/;"	f	class:RectangleGLList
+insertToOctree	frw/spacemanagement.cpp	/^void  insertToOctree( Subnet subCond, Cell2d &cellT  ){$/;"	f
+instantiableConductorFPList	frw/geo2condlist/geoloader.h	/^    ConductorFPList         instantiableConductorFPList;$/;"	m	class:GeoLoader
+interpolate_exclusive	fdm.cc	/^void interpolate_exclusive(double start, double end, double dmin, double multiple, vector<double> &v)$/;"	f
+intersectArchOnFlat	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGL RectangleGL::intersectArchOnFlat(const RectangleGL &flat) const$/;"	f	class:RectangleGL
+intersectProjection	frw/geo2condlist/gdsgeometry.cpp	/^RectangleGL RectangleGL::intersectProjection(const RectangleGL &rect) const$/;"	f	class:RectangleGL
+isCoincidental	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGL::isCoincidental(const RectangleGL &support, const float margin) const$/;"	f	class:RectangleGL
+isCollinear	frw/geo2condlist/geoloader.cpp	/^inline bool isCollinear(const Point &p1, const Point &p2, const Point &p3 ){$/;"	f
+isContaining	frw/geo2condlist/gdsgeometry.cpp	/^bool Conductor::isContaining(const Rectangle rect, const int layerIndex )$/;"	f	class:Conductor
+isContaining	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGL::isContaining(const RectangleGL &rect) const$/;"	f	class:RectangleGL
+isConvex	frw/geo2condlist/geoloader.cpp	/^inline bool isConvex(int pos, int dir2){$/;"	f
+isEmpty	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGL::isEmpty() const$/;"	f	class:RectangleGL
+isFilledChecked	frw/spacemanagement.h	/^	bool isFilledChecked;	\/\/to express if the FilledWithCond is checked.$/;"	m	class:Cell2d
+isFilledWithCond	frw/spacemanagement.h	/^	bool isFilledWithCond;  \/\/to express if the Cell is totally filled with SubConductor. Note: subConductor, not the whole Condcutor!$/;"	m	class:Cell2d
+isIncludedIn	frw/geo2condlist/gdsgeometry.cpp	/^bool Rectangle::isIncludedIn( const Rectangle &rect ) const{$/;"	f	class:Rectangle
+isIncludedIn	frw/spacemanagement.cpp	/^bool Cell2d::isIncludedIn(Subnet subCond){$/;"	f	class:Cell2d
+isInsectWith	frw/spacemanagement.cpp	/^bool Cell2d::isInsectWith(Subnet subCond){$/;"	f	class:Cell2d
+isIntersecting3d	frw/geo2condlist/gdsgeometry.cpp	/^bool Rectangle::isIntersecting3d(const Rectangle &rect)const{$/;"	f	class:Rectangle
+isLoaded	frw/geo2condlist/geoloader.h	/^    bool                    isLoaded;$/;"	m	class:GeoLoader
+isManhattan	frw/geo2condlist/gdsgeometry.cpp	/^bool Polygon::isManhattan() const$/;"	f	class:Polygon
+isNeighborWith	frw/FRWcapext.cpp	/^bool GaussianSurface2d::isNeighborWith( GaussianSurface2d &gaussian ){$/;"	f	class:GaussianSurface2d
+isOverlapping	frw/geo2condlist/gdsgeometry.cpp	/^bool Rectangle::isOverlapping( const Rectangle &rect ) const{$/;"	f	class:Rectangle
+isOverlapping	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGL::isOverlapping(const RectangleGL &rect) const$/;"	f	class:RectangleGL
+isOverlapping3d	frw/geo2condlist/gdsgeometry.cpp	/^bool Rectangle::isOverlapping3d( const Rectangle &rect ) const{$/;"	f	class:Rectangle
+isOverlappingOrEdgeNeighboring	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGL::isOverlappingOrEdgeNeighboring(const RectangleGL &rect) const$/;"	f	class:RectangleGL
+isOverlappingProjection	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGL::isOverlappingProjection(const RectangleGL &rect) const$/;"	f	class:RectangleGL
+isPointEnclosedBySurface	frw/FRWcapext.cpp	/^bool GaussianSurface2d::isPointEnclosedBySurface( FPoint2d &point ){$/;"	f	class:GaussianSurface2d
+isPointOnSurface	frw/FRWcapext.cpp	/^bool GaussianSurface2d::isPointOnSurface(FPoint2d &point){$/;"	f	class:GaussianSurface2d
+isRandSeedSet	frw/FRWcapext.h	/^	static bool isRandSeedSet;$/;"	m	class:FRWControl
+isRandSeedSet	frw/FRWcapext.h	/^bool FRWControl::isRandSeedSet=false;$/;"	m	class:FRWControl
+isVia	frw/geo2condlist/gdsgeometry.h	/^    bool isVia;$/;"	m	class:SubConductor
+iterate	frw/gds2geo/gdsii/record.py	/^    def iterate(cls, stream):$/;"	m	class:Record
+lastIt	frw/geo2condlist/gdsgeometry.h	/^    ConductorList2d::iterator lastIt(){$/;"	f	class:ConductorList2d
+lastIt	frw/geo2condlist/gdsgeometry.h	/^    ConductorList::iterator lastIt(){$/;"	f	class:ConductorList
+layer	frw/geo2condlist/gdsgeometry.h	/^    LayeredDirRectangleGLList layer;$/;"	m	class:ConductorFP
+layer	frw/geo2condlist/gdsgeometry.h	/^    std::vector<std::vector<RectangleList> > layer;$/;"	m	class:Conductor
+len	frw/geo2condlist/gdsgeometry.h	/^    int len; \/\/* only used in a polygon$/;"	m	class:Point
+lenLess	frw/geo2condlist/geoloader.cpp	/^bool lenLess(const Point &p1, const Point &p2){$/;"	f
+lessPairFirst	frw/geo2condlist/geoloader.cpp	/^bool lessPairFirst(const pair<T,T> p1, const pair<T,T> p2){$/;"	f
+lo_idx	fdm.cc	/^        unsigned int lo_idx;$/;"	m	class:Sentry	file:
+lo_val	fdm.cc	/^double Sentry::lo_val() {$/;"	f	class:Sentry
+lo_x	common.h	/^        unsigned int lo_x, lo_z, hi_x, hi_z; $/;"	m	class:Net
+lo_z	common.h	/^        unsigned int lo_x, lo_z, hi_x, hi_z; $/;"	m	class:Net
+load	frw/gds2geo/gdsii/library.py	/^    def load(cls, stream):$/;"	m	class:Library
+loadDataTable	frw/FRWcapext.cpp	/^void loadDataTable(const char *dataFile, vector<double>  &dataTable , int &tableSize ){$/;"	f
+loadDataTable	frw/FRWcapext.cpp	/^void loadDataTable(const char *dataFile, vector<vector<double> > &dataTable , int &tableSize ){$/;"	f
+loadGeo	frw/geo2condlist/geoloader.cpp	/^void GeoLoader::loadGeo(const string &geoFile) throw (FileNotFoundError, GeometryNotManhattanError){$/;"	f	class:GeoLoader
+locateCellFromRoot	frw/FRWcapext.cpp	/^Cell2d* locateCellFromRoot( FPoint2d &p, Cell2d *rootCell , Face &cube ){$/;"	f
+locateCellTime	frw/FRWcapext.h	/^double locateCellTime=0;$/;"	v
+locateOctreeRootCell	frw/FRWcapext.cpp	/^Cell2d* locateOctreeRootCell(  FPoint2d &p, GridOctree2d &gridOctree  ){$/;"	f
+m_layerInfo1	frw/geo2condlist/gdsgeometry.h	/^    std::string m_layerInfo1;$/;"	m	class:ConductorLayerNotCompatibleError
+m_layerInfo2	frw/geo2condlist/gdsgeometry.h	/^    std::string m_layerInfo2;$/;"	m	class:ConductorLayerNotCompatibleError
+m_msg	frw/geo2condlist/gdsgeometry.h	/^    std::string m_msg;$/;"	m	class:ShapeTransformationError
+m_msg	frw/geo2condlist/geoloader.h	/^    std::string m_msg;$/;"	m	class:FileNotFoundError
+mag	frw/gds2geo/gdsii/_records.py	/^    mag = SimpleOptionalRecord('mag', tags.MAG)$/;"	v	class:STransRecord
+main	fieldsolver2d.cc	/^int main(int argc, char* argv[])$/;"	f
+main	frw/gds2geo/caplet_gds2geo.py	/^def main():$/;"	f
+masterCondID	frw/FRWcapext.h	/^	int masterCondID;$/;"	m	class:Capacitance
+max	frw/spacemanagement.cpp	/^double max( double a, double b  ){$/;"	f
+max	frw/spacemanagement.cpp	/^int max(int a, int b){$/;"	f
+maxCandidateListLen	frw/spacemanagement.h	/^	static  int maxCandidateListLen;$/;"	m	class:Cell2d
+maxCandidateListLen	frw/spacemanagement.h	/^int Cell2d::maxCandidateListLen=4;$/;"	m	class:Cell2d
+maxPermittedCapErr	frw/FRWcapext.h	/^	static double maxPermittedCapErr;$/;"	m	class:FRWControl
+maxPermittedCapErr	frw/FRWcapext.h	/^double FRWControl::maxPermittedCapErr=2;$/;"	m	class:FRWControl
+merge	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleList::merge()$/;"	f	class:RectangleList
+mergeProjection	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGLList::mergeProjection()$/;"	f	class:RectangleGLList
+mergeProjection1_1	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGLList::mergeProjection1_1(const float projectionMergeDistance)$/;"	f	class:RectangleGLList
+metalConductorList	frw/geo2condlist/geoloader.h	/^    ConductorList           metalConductorList;$/;"	m	class:GeoLoader
+metalDef	frw/geo2condlist/geoloader.h	/^    int**   metalDef;   \/\/* size: nMetal x 2$/;"	m	class:GeoLoader
+min	frw/spacemanagement.cpp	/^double min( double a1, double  a2){$/;"	f
+min	frw/spacemanagement.cpp	/^double min( double a1, double a2, double a3, double a4 ){$/;"	f
+min	frw/spacemanagement.cpp	/^double min( double a1, double a2, double a3, double a4, double a5, double a6  ){$/;"	f
+min	frw/spacemanagement.cpp	/^int min( int a, int b  ){ $/;"	f
+min	frw/spacemanagement.cpp	/^int min( int a1,int a2, int a3, int a4, int a5  , int a6  ){$/;"	f
+minCellSize	frw/spacemanagement.h	/^	static  double minCellSize;                 \/\/2 times of the min width (nm)$/;"	m	class:Cell2d
+minCellSize	frw/spacemanagement.h	/^double Cell2d::minCellSize= GridOctree2d::gridCellSize \/pow(2.0, double(depthOfOctreeFromRoot2d) ) ;$/;"	m	class:Cell2d
+minExtensionDis	frw/geo2condlist/gdsgeometry.h	/^    double minExtensionDis;$/;"	m	class:GaussianSurfaceList
+minExtensionDis	frw/geo2condlist/gdsgeometry.h	/^    double minExtensionDis;$/;"	m	class:GaussianSurfaceList2d
+myDistance2d	frw/FRWcapext.cpp	/^int myDistance2d( Subnet rectA,Subnet rectB, int dirOfRectA ){$/;"	f
+myDistance2d	frw/spacemanagement.cpp	/^double myDistance2d( FPoint2d  &p, Boundary &rect ){$/;"	f
+myDistance2d	frw/spacemanagement.cpp	/^double myDistance2d( FPoint2d  &p, Subnet rect  ){$/;"	f
+myDistance2d	frw/spacemanagement.cpp	/^double myDistance2d(Subnet rectA, Cell2d &cellT ){$/;"	f
+myDistance2d	frw/spacemanagement.cpp	/^int myDistance2d(Subnet rectA ,Subnet rectB){$/;"	f
+nBasisFunction	frw/geo2condlist/geoloader.h	/^    int nBasisFunction;$/;"	m	class:ExtractionInfo
+nConductor	frw/geo2condlist/geoloader.h	/^    int nConductor;$/;"	m	class:ExtractionInfo
+nDir	frw/geo2condlist/gdsgeometry.h	/^    static const int nDir = 6;$/;"	m	class:Conductor
+nDir	frw/geo2condlist/gdsgeometry.h	/^    static const unsigned nDir = 6;$/;"	m	class:ConductorFP
+nDir	frw/geo2condlist/gdsgeometry.h	/^const int nDir = 6;$/;"	v
+nLayer	frw/geo2condlist/gdsgeometry.h	/^    int nLayer;$/;"	m	class:Conductor
+nLayer	frw/geo2condlist/gdsgeometry.h	/^    int nLayer;$/;"	m	class:ConductorFP
+nMetal	frw/geo2condlist/gdsgeometry.h	/^    int nMetal;$/;"	m	class:Conductor
+nMetal	frw/geo2condlist/gdsgeometry.h	/^    int nMetal;$/;"	m	class:ConductorFP
+nMetal	frw/geo2condlist/geoloader.h	/^    int     nMetal;$/;"	m	class:GeoLoader
+nVia	frw/geo2condlist/gdsgeometry.h	/^    int nVia;$/;"	m	class:Conductor
+nVia	frw/geo2condlist/gdsgeometry.h	/^    int nVia;$/;"	m	class:ConductorFP
+nVia	frw/geo2condlist/geoloader.h	/^    int     nVia;$/;"	m	class:GeoLoader
+nX	frw/FRWcapext.h	/^enum NormalDirection2d{ pX, pZ, nX, nZ };$/;"	e	enum:NormalDirection2d
+nZ	frw/FRWcapext.h	/^enum NormalDirection2d{ pX, pZ, nX, nZ };$/;"	e	enum:NormalDirection2d
+neighborCondList	frw/FRWcapext.h	/^	SubConductorList2d neighborCondList;$/;"	m	class:Face
+neighborGaussianSurfaceCheck	frw/FRWcapext.cpp	/^void neighborGaussianSurfaceCheck( GaussianSurfaceList2d &BGSList ){$/;"	f
+neighborList	frw/FRWcapext.h	/^	std::list<GaussianSurface2d> neighborList;$/;"	m	class:GaussianSurface2d
+net	frw/geo2condlist/gdsgeometry.h	/^    Net* net;$/;"	m	class:OneConduct
+net_name	common.h	/^        int net_name;$/;"	m	class:Subnet
+net_name	frw/geo2condlist/gdsgeometry.h	/^    int net_name;$/;"	m	class:OneConduct
+nets_coord	fdm.cc	/^        vector<double> nets_coord;$/;"	m	class:Sentry	file:
+nextIterator	frw/geo2condlist/geoloader.cpp	/^inline Polygon::iterator nextIterator(Polygon& poly, Polygon::iterator currentIterator){$/;"	f
+normal	frw/geo2condlist/gdsgeometry.h	/^    Dir     normal;$/;"	m	class:Rectangle
+on_boundary	fdm.cc	/^bool on_boundary(double x, double z, Boundary b, map<int, Net*> nets, int &u) {$/;"	f
+operator ()	common.h	/^    inline bool operator()(const double &x) const {$/;"	f	struct:dbl_cmp
+operator +=	frw/geo2condlist/gdsgeometry.cpp	/^Conductor& Conductor::operator+= (  Conductor& rhs ) throw ( ConductorLayerNotCompatibleError )$/;"	f	class:Conductor
+operator -	frw/geo2condlist/gdsgeometry.cpp	/^Point Point::operator-(const Point& other)$/;"	f	class:Point
+operator -	frw/geo2condlist/gdsgeometry.cpp	/^Rectangle Rectangle::operator- (const Rectangle &rect ) const{$/;"	f	class:Rectangle
+operator ==	frw/FRWcapext.cpp	/^bool GaussianSurface2d::operator ==( GaussianSurface2d &rhs  ){$/;"	f	class:GaussianSurface2d
+operator ==	frw/geo2condlist/gdsgeometry.cpp	/^bool Point::operator ==(const Point& other)$/;"	f	class:Point
+operator ==	frw/geo2condlist/gdsgeometry.cpp	/^bool RectangleGL::operator ==(const RectangleGL &rect) const$/;"	f	class:RectangleGL
+operator ==	frw/geo2condlist/gdsgeometry.cpp	/^bool SubConductor::operator == (SubConductor &rhs){$/;"	f	class:SubConductor
+optional_read	frw/gds2geo/gdsii/_records.py	/^    def optional_read(self, instance, gen, rec):$/;"	m	class:FormatRecord
+optional_read	frw/gds2geo/gdsii/_records.py	/^    def optional_read(self, instance, gen, rec):$/;"	m	class:STransRecord
+optional_read	frw/gds2geo/gdsii/_records.py	/^    def optional_read(self, instance, unused_gen, rec):$/;"	m	class:ACLRecord
+optional_read	frw/gds2geo/gdsii/_records.py	/^    def optional_read(self, instance, unused_gen, rec):$/;"	m	class:OptionalWholeRecord
+optional_read	frw/gds2geo/gdsii/_records.py	/^    def optional_read(self, instance, unused_gen, rec):$/;"	m	class:SimpleOptionalRecord
+pX	frw/FRWcapext.h	/^enum NormalDirection2d{ pX, pZ, nX, nZ };$/;"	e	enum:NormalDirection2d
+pZ	frw/FRWcapext.h	/^enum NormalDirection2d{ pX, pZ, nX, nZ };$/;"	e	enum:NormalDirection2d
+parse_args	frw/gds2geo/argparse.py	/^    def parse_args(self, args=None, namespace=None):$/;"	m	class:ArgumentParser
+parse_known_args	frw/gds2geo/argparse.py	/^    def parse_known_args(self, args=None, namespace=None):$/;"	m	class:ArgumentParser
+parse_layerdef	frw/gds2geo/caplet_gds2geo.py	/^def parse_layerdef(layerdef):$/;"	f
+parse_options	common.h	/^int parse_options(int argc, char* argv[], string &input_data, string &result_out, string &use_method, double &shrink_val)$/;"	f
+partitionDomain	frw/spacemanagement.cpp	/^GridOctree2d partitionDomain( double cellSize,  int &nX, int &nZ ,Boundary GDS_zone){$/;"	f
+path2rects	frw/gds2geo/caplet_gds2geo.py	/^def path2rects(xy, width):$/;"	f
+pi	bem.cc	/^const double pi = 4*atan(1);$/;"	v
+points	frw/gds2geo/gdsii/record.py	/^    def points(self):$/;"	m	class:Record
+poly2rect	frw/geo2condlist/geoloader.cpp	/^void poly2rect(PolygonList &polyList, RectangleList &rectList){$/;"	f
+prevIterator	frw/geo2condlist/geoloader.cpp	/^inline Polygon::iterator prevIterator(Polygon& poly, Polygon::iterator currentIterator){$/;"	f
+print	frw/geo2condlist/gdsgeometry.cpp	/^void Conductor::print() const {$/;"	f	class:Conductor
+print	frw/geo2condlist/gdsgeometry.cpp	/^void Rectangle::print() const{$/;"	f	class:Rectangle
+print	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGL::print() const$/;"	f	class:RectangleGL
+printCapletLine	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGL::printCapletLine(ostream &out) const$/;"	f	class:RectangleGL
+printCapletLineFlat	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGL::printCapletLineFlat(ostream &out) const$/;"	f	class:RectangleGL
+printConductorListMatlab	frw/geo2condlist/geoloader.cpp	/^void printConductorListMatlab(ConductorList &conductorList){$/;"	f
+printMatrix	frw/geo2condlist/geoloader.cpp	/^void printMatrix(T** matrix, int nrow, int ncol){$/;"	f
+printPolygon	frw/geo2condlist/geoloader.cpp	/^void printPolygon(Polygon &poly){$/;"	f
+printPolygonList	frw/geo2condlist/geoloader.cpp	/^void printPolygonList(PolygonList &polyList){$/;"	f
+printRectList	frw/geo2condlist/geoloader.cpp	/^void printRectList(RectangleList &rectList){$/;"	f
+printRectListMatlab	frw/geo2condlist/geoloader.cpp	/^void printRectListMatlab(RectangleList &rectList, Dir dir, ofstream& fout){$/;"	f
+printRectMap	frw/geo2condlist/geoloader.cpp	/^void printRectMap(RectangleMap &rectMap){$/;"	f
+printStruc	frw/geo2condlist/geoloader.cpp	/^void GeoLoader::printStruc(int nLayer, vector<PolygonList> &struc){$/;"	f	class:GeoLoader
+print_dense_matrix	fdm.cc	/^void print_dense_matrix(cholmod_dense *A)$/;"	f
+print_gauss	common.h	/^void print_gauss(map<int, Net*> nets)$/;"	f
+print_help	frw/gds2geo/argparse.py	/^    def print_help(self, file=None):$/;"	m	class:ArgumentParser
+print_input	common.h	/^void print_input(Boundary b, double d, map<int,Net*> nets)$/;"	f
+print_result_2	common.h	/^void print_result_2(map<int, Net*> nets, string result_out, int b)$/;"	f
+print_runtime	common.h	/^void print_runtime()$/;"	f
+print_usage	common.h	/^void print_usage()$/;"	f
+print_usage	frw/gds2geo/argparse.py	/^    def print_usage(self, file=None):$/;"	m	class:ArgumentParser
+print_vector	common.h	/^void print_vector(std::vector<double> v, int flag=0)$/;"	f
+print_version	frw/gds2geo/argparse.py	/^    def print_version(self, file=None):$/;"	m	class:ArgumentParser
+processorIndex_mutex	frw/FRWcapext.h	/^pthread_mutex_t processorIndex_mutex;  \/\/在设定线程亲和力的时候对线程加锁$/;"	v
+pwcConductorFPList	frw/geo2condlist/geoloader.h	/^    ConductorFPList         pwcConductorFPList;$/;"	m	class:GeoLoader
+randSeedVec	frw/FRWcapext.h	/^	static vector<long> randSeedVec;$/;"	m	class:FRWControl
+randSeedVec	frw/FRWcapext.h	/^vector<long> FRWControl::randSeedVec;$/;"	m	class:FRWControl
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:AbstractRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:ColRowRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:PropertiesRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:SimpleOptionalRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:SimpleRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:StringRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:TimestampsRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:UnitsRecord
+read	frw/gds2geo/gdsii/_records.py	/^    def read(self, instance, gen):$/;"	m	class:XYRecord
+read	frw/gds2geo/gdsii/record.py	/^    def read(cls, stream):$/;"	m	class:Record
+readGeo	frw/geo2condlist/geoloader.cpp	/^void GeoLoader::readGeo($/;"	f	class:GeoLoader
+readLayerInfo	frw/geo2condlist/geoloader.cpp	/^void GeoLoader::readLayerInfo(ifstream &fin)$/;"	f	class:GeoLoader
+readStruc	frw/geo2condlist/geoloader.cpp	/^void GeoLoader::readStruc(ifstream &fin, int nLayer, vector<PolygonList> &struc , int metalOrVia  ){$/;"	f	class:GeoLoader
+read_next	frw/gds2geo/gdsii/record.py	/^    def read_next(self):$/;"	m	class:Reader
+rec_x0	common.h	/^		double rec_x0, rec_x1, rec_z0, rec_z1;$/;"	m	class:Boundary
+rec_x1	common.h	/^		double rec_x0, rec_x1, rec_z0, rec_z1;$/;"	m	class:Boundary
+rec_z0	common.h	/^		double rec_x0, rec_x1, rec_z0, rec_z1;$/;"	m	class:Boundary
+rec_z1	common.h	/^		double rec_x0, rec_x1, rec_z0, rec_z1;$/;"	m	class:Boundary
+referenceResult	frw/geo2condlist/geoloader.h	/^    ExtractionInfo referenceResult;$/;"	m	class:GeoLoader
+register	frw/gds2geo/argparse.py	/^    def register(self, registry_name, value, object):$/;"	m	class:_ActionsContainer
+removeBadProjection	frw/geo2condlist/gdsgeometry.cpp	/^void RectangleGLList::removeBadProjection(float margin) {$/;"	f	class:RectangleGLList
+removeOneFarthestBadProjection	frw/geo2condlist/gdsgeometry.cpp	/^bool removeOneFarthestBadProjection(RectangleGLList &rectList,$/;"	f
+reset	frw/FRWcapext.h	/^	void reset(){$/;"	f	class:Capacitance
+sampleOnVGSS	frw/FRWcapext.cpp	/^void sampleOnVGSS( FPoint2d &pointOnVGS, GaussianSurfaceList2d &BGSList ,double &PDFOnVGS  ,int &normalDirOfVGS , int &Nt, int &Ng , double &PDFIntegralElement, boost::variate_generator<boost::mt19937&,boost::uniform_01<> > &rand_01 )$/;"	f
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:ACLRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:AbstractRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:ColRowRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:FormatRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:OptionalWholeRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:PropertiesRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:STransRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:SimpleOptionalRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:SimpleRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:StringRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:TimestampsRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:UnitsRecord
+save	frw/gds2geo/gdsii/_records.py	/^    def save(self, instance, stream):$/;"	m	class:XYRecord
+save	frw/gds2geo/gdsii/library.py	/^    def save(self, stream):$/;"	m	class:Library
+save	frw/gds2geo/gdsii/record.py	/^    def save(self, stream):$/;"	m	class:Record
+scale_of_extensionSize	frw/spacemanagement.cpp	/^double scale_of_extensionSize ;$/;"	v
+selectPointFromPlane	frw/FRWcapext.cpp	/^void selectPointFromPlane( FPoint2d &fp,   double x1, double x2, double size, int nX, int nY , vector<double>  &GreenVT, boost::variate_generator<boost::mt19937&,boost::uniform_01<> > &rand_01  ){$/;"	f
+seq_length	common.h	/^		unsigned long int seq_start, seq_length; \/\/ sequential number in those element vectors such as xk, zk, lk etc.$/;"	m	class:Net
+seq_start	common.h	/^		unsigned long int seq_start, seq_length; \/\/ sequential number in those element vectors such as xk, zk, lk etc.$/;"	m	class:Net
+set	common.h	/^void Boundary::set (double a, double b, double c, double d)$/;"	f	class:Boundary
+set	frw/geo2condlist/gdsgeometry.h	/^void OneConduct::set (Net* net1,Conductor2d conductor2d1,int net_name1)$/;"	f	class:OneConduct
+set	frw/geo2condlist/gdsgeometry.h	/^void TestList::set(OneConduct oneconduct)$/;"	f	class:TestList
+setCoordinate	frw/FRWcapext.h	/^	void setCoordinate(  double x_1, double x_2,  double z_1, double z_2  ){$/;"	f	class:Face
+setCoordinate	frw/geo2condlist/gdsgeometry.cpp	/^void Point::setCoordinate(int xx, int yy, int zz ){$/;"	f	class:Point
+setCoordinate	frw/spacemanagement.h	/^	void setCoordinate( double x_1, double z_1 ){$/;"	f	class:FPoint2d
+setSurfaceArea	frw/FRWcapext.cpp	/^void GaussianSurface2d::setSurfaceArea(){$/;"	f	class:GaussianSurface2d
+set_cap	common.h	/^void Net::set_cap(double c)$/;"	f	class:Net
+set_defaults	frw/gds2geo/argparse.py	/^    def set_defaults(self, **kwargs):$/;"	m	class:_ActionsContainer
+set_index	common.h	/^void Net::set_index(unsigned int a, unsigned int b, unsigned int c, unsigned int d)$/;"	f	class:Net
+set_seqlen	common.h	/^void Net::set_seqlen(unsigned long int start, unsigned int length)$/;"	f	class:Net
+shapeDir	frw/geo2condlist/gdsgeometry.h	/^    ShapeDir    shapeDir;$/;"	m	class:RectangleGL
+shapeNormalDistance	frw/geo2condlist/gdsgeometry.h	/^    float       shapeNormalDistance;$/;"	m	class:RectangleGL
+shapeShift	frw/geo2condlist/gdsgeometry.h	/^    float       shapeShift;$/;"	m	class:RectangleGL
+shapeType	frw/geo2condlist/gdsgeometry.h	/^    ShapeType   shapeType;$/;"	m	class:RectangleGL
+shrink	common.h	/^void Boundary::shrink (double shrink_val)$/;"	f	class:Boundary
+sign	frw/geo2condlist/geoloader.cpp	/^int sign(int a){$/;"	f
+size	frw/FRWcapext.cpp	/^double Face::size(){$/;"	f	class:Face
+size	frw/geo2condlist/gdsgeometry.cpp	/^int Rectangle::size() const{$/;"	f	class:Rectangle
+size	frw/geo2condlist/gdsgeometry.cpp	/^unsigned ConductorFP::size() const$/;"	f	class:ConductorFP
+size	frw/spacemanagement.cpp	/^double Cell2d::size(){$/;"	f	class:Cell2d
+sort_unique	common.h	/^void sort_unique(std::vector<double> &v)$/;"	f
+split	frw/FRWcapext.cpp	/^vector<string> split( string str, string pattern){$/;"	f
+split_2	common.h	/^void split_2(const std::string& input, const std::string& delim, vector<string>& res)$/;"	f
+start	common.h	/^		double start; \/\/ start point coordinate; it is the y-coordinate of the bottom point if dir is 0$/;"	m	class:Border
+start_section	frw/gds2geo/argparse.py	/^    def start_section(self, heading):$/;"	m	class:HelpFormatter
+std_var	frw/FRWcapext.h	/^	double std_var;$/;"	m	class:Capacitance
+subCellList	frw/spacemanagement.h	/^	list<Cell2d> subCellList;     \/\/using list is more flexible than vector$/;"	m	class:Cell2d
+subConductorList	frw/geo2condlist/gdsgeometry.h	/^    SubConductorList subConductorList;$/;"	m	class:Conductor
+subGridCellVec	frw/spacemanagement.h	/^	vector<vector<Cell2d*> >  subGridCellVec;$/;"	m	class:Cell2d
+subGridSize	frw/spacemanagement.h	/^	static  double subGridSize;                 \/\/这个变量是用来规定每一个八叉树空间的栅格的尺寸$/;"	m	class:Cell2d
+subGridSize	frw/spacemanagement.h	/^double Cell2d::subGridSize= pow(2.0, double(depthOfOctreeFromSubGrid2d))*Cell2d::minCellSize ;     $/;"	m	class:Cell2d
+subnets	common.h	/^        vector<Subnet> subnets; \/\/ for debug$/;"	m	class:Net
+sumOfCap	frw/FRWcapext.h	/^	double sumOfCap;$/;"	m	class:Capacitance
+sumOfCapSquared	frw/FRWcapext.h	/^	double sumOfCapSquared;$/;"	m	class:Capacitance
+surfaceArea	frw/FRWcapext.h	/^	std::vector<double> surfaceArea;$/;"	m	class:GaussianSurface2d
+surfaceGreenFunction	frw/FRWcapext.cpp	/^double surfaceGreenFunction(  Face &cube, FPoint2d &p , int normalDirOfCube, vector<double> &GreenVT ){$/;"	f
+tBasis	frw/geo2condlist/geoloader.h	/^    double tBasis;$/;"	m	class:ExtractionInfo
+tInstantiableConstruction	frw/geo2condlist/geoloader.h	/^    double                  tInstantiableConstruction;$/;"	m	class:GeoLoader
+tPWCConstruction	frw/geo2condlist/geoloader.h	/^    double                  tPWCConstruction;$/;"	m	class:GeoLoader
+tSetup	frw/geo2condlist/geoloader.h	/^    double tSetup;$/;"	m	class:ExtractionInfo
+tSolving	frw/geo2condlist/geoloader.h	/^    double tSolving;$/;"	m	class:ExtractionInfo
+tTotal	frw/geo2condlist/geoloader.h	/^    double tTotal;$/;"	m	class:ExtractionInfo
+t_cube_end	frw/FRWcapext.h	/^struct timeval t_cube_start,t_cube_end, t_p_start, t_p_end, t_locatecell_start, t_locatecell_end  ;$/;"	v	typeref:struct:
+t_cube_start	frw/FRWcapext.h	/^struct timeval t_cube_start,t_cube_end, t_p_start, t_p_end, t_locatecell_start, t_locatecell_end  ;$/;"	v	typeref:struct:timeval
+t_locatecell_end	frw/FRWcapext.h	/^struct timeval t_cube_start,t_cube_end, t_p_start, t_p_end, t_locatecell_start, t_locatecell_end  ;$/;"	v	typeref:struct:
+t_locatecell_start	frw/FRWcapext.h	/^struct timeval t_cube_start,t_cube_end, t_p_start, t_p_end, t_locatecell_start, t_locatecell_end  ;$/;"	v	typeref:struct:
+t_p_end	frw/FRWcapext.h	/^struct timeval t_cube_start,t_cube_end, t_p_start, t_p_end, t_locatecell_start, t_locatecell_end  ;$/;"	v	typeref:struct:
+t_p_start	frw/FRWcapext.h	/^struct timeval t_cube_start,t_cube_end, t_p_start, t_p_end, t_locatecell_start, t_locatecell_end  ;$/;"	v	typeref:struct:
+tag_name	frw/gds2geo/gdsii/record.py	/^    def tag_name(self):$/;"	m	class:Record
+tag_type	frw/gds2geo/gdsii/record.py	/^    def tag_type(self):$/;"	m	class:Record
+tag_type_name	frw/gds2geo/gdsii/record.py	/^    def tag_type_name(self):$/;"	m	class:Record
+take_action	frw/gds2geo/argparse.py	/^        def take_action(action, argument_strings, option_string=None):$/;"	f	function:ArgumentParser._parse_known_args
+teatlist	frw/FRWcapext.h	/^	static TestList teatlist;$/;"	m	class:FRWControl
+teatlist	frw/FRWcapext.h	/^TestList FRWControl::teatlist;$/;"	m	class:FRWControl
+test_iter	frw/geo2condlist/gdsgeometry.h	/^    list<OneConduct> ::iterator test_iter;$/;"	m	class:TestList
+testlist	frw/geo2condlist/gdsgeometry.h	/^    list<OneConduct> testlist;$/;"	m	class:TestList
+times	frw/gds2geo/gdsii/record.py	/^    def times(self):$/;"	m	class:Record
+totalNumOfWalkOfCond	frw/FRWcapext.h	/^	static vector<long> totalNumOfWalkOfCond;$/;"	m	class:FRWControl
+totalNumOfWalkOfCond	frw/FRWcapext.h	/^vector<long> FRWControl::totalNumOfWalkOfCond;$/;"	m	class:FRWControl
+totalProcessorNum	frw/FRWcapext.h	/^	static int totalProcessorNum;$/;"	m	class:FRWControl
+totalProcessorNum	frw/FRWcapext.h	/^int FRWControl::totalProcessorNum=0;$/;"	m	class:FRWControl
+totalStepNum	frw/FRWcapext.h	/^long totalStepNum=0;$/;"	v
+tv_begin	frw/FRWcapext.h	/^struct timeval tv_begin,tv_end;$/;"	v	typeref:struct:timeval
+tv_end	frw/FRWcapext.h	/^struct timeval tv_begin,tv_end;$/;"	v	typeref:struct:
+type_of_tag	frw/gds2geo/gdsii/tags.py	/^def type_of_tag(tag):$/;"	f
+update	frw/FRWcapext.h	/^	void update( double cap ){$/;"	f	class:Capacitance
+update	frw/FRWcapext.h	/^	void update(Capacitance &capEntity){$/;"	f	class:Capacitance
+updateEdgeDirLen	frw/geo2condlist/geoloader.cpp	/^void updateEdgeDirLen( Point &prev, Point& current, Point &next )$/;"	f
+updateFRWData_mutex	frw/FRWcapext.h	/^pthread_mutex_t updateFRWData_mutex;$/;"	v
+updateProgress	frw/FRWcapext.cpp	/^bool FRWControl::updateProgress(int tempWalkNum, int masterCondIndex,  double temp_VGSArea ){$/;"	f	class:FRWControl
+updateSubGridCellVec2d	frw/spacemanagement.cpp	/^void updateSubGridCellVec2d(Cell2d &rootCell,  Cell2d *cellP,  vector<vector<Cell2d*> > &subGridCellVec ){$/;"	f
+updateSubGridCellVec2d	frw/spacemanagement.cpp	/^void updateSubGridCellVec2d(GridOctree2d &gridOctree)$/;"	f
+val	common.h	/^    double val, delta;$/;"	m	struct:dbl_cmp
+val	fdm.cc	/^double Sentry::val(unsigned int idx)$/;"	f	class:Sentry
+vecLen2	frw/geo2condlist/gdsgeometry.h	/^    inline int vecLen2(){ return (x!=0)? int(std::abs(float(x))) : int(std::abs(float(y))); } \/\/* 2D Manhattan geometry only$/;"	f	class:Point
+viaConnect	frw/geo2condlist/geoloader.h	/^    int**   viaConnect; \/\/* size: nVia x 2$/;"	m	class:GeoLoader
+viaDef	frw/geo2condlist/geoloader.h	/^    int**   viaDef;     \/\/* size: nVia x 2$/;"	m	class:GeoLoader
+viaLayeredRectangleList	frw/geo2condlist/geoloader.h	/^    LayeredRectangleList    viaLayeredRectangleList;$/;"	m	class:GeoLoader
+what	frw/geo2condlist/gdsgeometry.h	/^    virtual const char* what() const throw(){$/;"	f	class:ConductorLayerNotCompatibleError
+what	frw/geo2condlist/gdsgeometry.h	/^    virtual const char* what() const throw(){$/;"	f	class:GeometryNotManhattanError
+what	frw/geo2condlist/gdsgeometry.h	/^    virtual const char* what() const throw(){$/;"	f	class:ShapeTransformationError
+what	frw/geo2condlist/geoloader.h	/^    virtual const char* what() const throw(){$/;"	f	class:FileNotFoundError
+width	common.h	/^        double width;$/;"	m	class:Boundary
+width	common.h	/^        double width;$/;"	m	class:Subnet
+x	frw/geo2condlist/gdsgeometry.h	/^    int x;$/;"	m	class:Point
+x0	common.h	/^        double x0, x1, z0, z1;$/;"	m	class:Boundary
+x0	common.h	/^        double x0, z0, x1, z1; $/;"	m	class:Net
+x0	common.h	/^        double x0,x1,z0,z1;$/;"	m	class:Subnet
+x1	common.h	/^        double x0, x1, z0, z1;$/;"	m	class:Boundary
+x1	common.h	/^        double x0, z0, x1, z1; $/;"	m	class:Net
+x1	common.h	/^        double x0,x1,z0,z1;$/;"	m	class:Subnet
+x1	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:Face
+x1	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:GaussianSurface2d
+x1	frw/geo2condlist/gdsgeometry.h	/^    float   x1;$/;"	m	class:RectangleGL
+x1	frw/geo2condlist/gdsgeometry.h	/^    int     x1;$/;"	m	class:Rectangle
+x1	frw/spacemanagement.h	/^	double x1, x2,z1, z2;$/;"	m	class:Cell2d
+x1	frw/spacemanagement.h	/^	double x1,z1;$/;"	m	class:FPoint2d
+x2	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:Face
+x2	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:GaussianSurface2d
+x2	frw/geo2condlist/gdsgeometry.h	/^    float   x2;$/;"	m	class:RectangleGL
+x2	frw/geo2condlist/gdsgeometry.h	/^    int     x2;$/;"	m	class:Rectangle
+x2	frw/spacemanagement.h	/^	double x1, x2,z1, z2;$/;"	m	class:Cell2d
+xLess	frw/geo2condlist/geoloader.cpp	/^bool xLess(const Point &p1, const Point &p2){$/;"	f
+xn	frw/geo2condlist/gdsgeometry.h	/^    float   xn;$/;"	m	class:RectangleGL
+y	frw/geo2condlist/gdsgeometry.h	/^    int y;$/;"	m	class:Point
+y1	frw/geo2condlist/gdsgeometry.h	/^    float   y1;$/;"	m	class:RectangleGL
+y1	frw/geo2condlist/gdsgeometry.h	/^    int     y1;$/;"	m	class:Rectangle
+y2	frw/geo2condlist/gdsgeometry.h	/^    float   y2;$/;"	m	class:RectangleGL
+y2	frw/geo2condlist/gdsgeometry.h	/^    int     y2;$/;"	m	class:Rectangle
+yn	frw/geo2condlist/gdsgeometry.h	/^    float   yn;$/;"	m	class:RectangleGL
+z	frw/geo2condlist/gdsgeometry.h	/^    int z;$/;"	m	class:Point
+z0	common.h	/^        double x0, x1, z0, z1;$/;"	m	class:Boundary
+z0	common.h	/^        double x0, z0, x1, z1; $/;"	m	class:Net
+z0	common.h	/^        double x0,x1,z0,z1;$/;"	m	class:Subnet
+z1	common.h	/^        double x0, x1, z0, z1;$/;"	m	class:Boundary
+z1	common.h	/^        double x0, z0, x1, z1; $/;"	m	class:Net
+z1	common.h	/^        double x0,x1,z0,z1;$/;"	m	class:Subnet
+z1	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:Face
+z1	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:GaussianSurface2d
+z1	frw/geo2condlist/gdsgeometry.h	/^    float   z1;$/;"	m	class:RectangleGL
+z1	frw/geo2condlist/gdsgeometry.h	/^    int     z1;$/;"	m	class:Rectangle
+z1	frw/spacemanagement.h	/^	double x1, x2,z1, z2;$/;"	m	class:Cell2d
+z1	frw/spacemanagement.h	/^	double x1,z1;$/;"	m	class:FPoint2d
+z2	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:Face
+z2	frw/FRWcapext.h	/^	double x1,x2,z1,z2;$/;"	m	class:GaussianSurface2d
+z2	frw/geo2condlist/gdsgeometry.h	/^    float   z2;$/;"	m	class:RectangleGL
+z2	frw/geo2condlist/gdsgeometry.h	/^    int     z2;$/;"	m	class:Rectangle
+z2	frw/spacemanagement.h	/^	double x1, x2,z1, z2;$/;"	m	class:Cell2d
+zn	frw/geo2condlist/gdsgeometry.h	/^    float   zn;$/;"	m	class:RectangleGL
+zone	frw/geo2condlist/geoloader.h	/^    static Boundary zone;$/;"	m	class:BoundStatic
+zone	frw/geo2condlist/geoloader.h	/^    static Rectangle zone;$/;"	m	class:GDS
+zone	frw/geo2condlist/geoloader.h	/^Boundary BoundStatic::zone=Boundary();$/;"	m	class:BoundStatic
+zone	frw/geo2condlist/geoloader.h	/^Rectangle GDS::zone=Rectangle();$/;"	m	class:GDS
+~ConductorLayerNotCompatibleError	frw/geo2condlist/gdsgeometry.h	/^    virtual ~ConductorLayerNotCompatibleError() throw() {}$/;"	f	class:ConductorLayerNotCompatibleError
+~FileNotFoundError	frw/geo2condlist/geoloader.h	/^    virtual ~FileNotFoundError() throw() {}$/;"	f	class:FileNotFoundError
+~GeoLoader	frw/geo2condlist/geoloader.cpp	/^GeoLoader::~GeoLoader(){$/;"	f	class:GeoLoader
+~GeometryNotManhattanError	frw/geo2condlist/gdsgeometry.h	/^    virtual ~GeometryNotManhattanError() throw() {}$/;"	f	class:GeometryNotManhattanError
+~ShapeTransformationError	frw/geo2condlist/gdsgeometry.h	/^    virtual ~ShapeTransformationError() throw() {}$/;"	f	class:ShapeTransformationError

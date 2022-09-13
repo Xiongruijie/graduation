@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/fieldsolver2d.dir/src/fieldsolver2d.cc.o  -o fieldsolver2d  -lcholmod -lamd -lcolamd -lsuitesparseconfig -lpthread 
