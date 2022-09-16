@@ -1,5 +1,5 @@
 from unittest import TestCase
-from InputdataGenerator import Trapezoid, Square
+from InputdataGenerator import Trapezoid, Square, print_Squares_Trapezoids
 
 
 class TestTrapezoid(TestCase):
@@ -22,3 +22,18 @@ class TestTrapezoid(TestCase):
 
 class Test(TestCase):
     pass
+
+
+class Test(TestCase):
+    def test_print_squares_trapezoids(self):
+
+        ConductorList = print_Squares_Trapezoids(100)
+        for i in range(len(ConductorList)):
+            if (isinstance(ConductorList[i], Trapezoid)):
+                print("net net" + i.__str__() + "   " + ConductorList[i].output()[0])
+                print("net net" + i.__str__() + "   " + ConductorList[i].output()[1])
+                print("net net" + i.__str__() + "   " + ConductorList[i].output()[2])
+                print("net net" + i.__str__() + "   " + ConductorList[i].output()[3])
+
+            else:
+                print("net net" + i.__str__() + "   " + ConductorList[i].output())

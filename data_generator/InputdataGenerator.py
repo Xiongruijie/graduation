@@ -37,6 +37,7 @@ class Square(object):
             return False
         else:
             return True
+
     def inspect_data(self):
         if self.right_high[0] > 9.9 or self.right_high[1] > 9.9:
             return False
@@ -44,8 +45,12 @@ class Square(object):
             return True
 
     def output(self):
-        '%.4f' % self
-        pass
+        rec0 = ('%.4f' % self.left_low[0]).__str__() + " " + (
+                '%.4f' % self.left_low[1]).__str__() + "   " + \
+               ('%.4f' % self.right_high[0]).__str__() + " " + (
+                       '%.4f' % self.right_high[1]).__str__()
+
+        return rec0
 
 
 class Trapezoid(Square):
@@ -69,11 +74,24 @@ class Trapezoid(Square):
         self.rectangle_3_right_high = [self.rectangle_2_right_high[0] - self.width_diff,
                                        self.rectangle_3_left_low[1] + self.hight_diff]
 
-
-
     def output(self):
-        '%.4f' % self
-        pass
+        rec0 = ('%.4f' % self.rectangle_0_left_low[0]).__str__() + " " + (
+                '%.4f' % self.rectangle_0_left_low[1]).__str__() + "   " + \
+               ('%.4f' % self.rectangle_0_right_high[0]).__str__() + " " + (
+                       '%.4f' % self.rectangle_0_right_high[1]).__str__()
+        rec1 = ('%.4f' % self.rectangle_1_left_low[0]).__str__() + " " + (
+                '%.4f' % self.rectangle_1_left_low[1]).__str__() + "   " + \
+               ('%.4f' % self.rectangle_1_right_high[0]).__str__() + " " + (
+                       '%.4f' % self.rectangle_1_right_high[1]).__str__()
+        rec2 = ('%.4f' % self.rectangle_2_left_low[0]).__str__() + " " + (
+                '%.4f' % self.rectangle_2_left_low[1]).__str__() + "   " + \
+               ('%.4f' % self.rectangle_2_right_high[0]).__str__() + " " + (
+                       '%.4f' % self.rectangle_2_right_high[1]).__str__()
+        rec3 = ('%.4f' % self.rectangle_3_left_low[0]).__str__() + " " + (
+                '%.4f' % self.rectangle_3_left_low[1]).__str__() + "   " + \
+               ('%.4f' % self.rectangle_3_right_high[0]).__str__() + " " + (
+                       '%.4f' % self.rectangle_3_right_high[1]).__str__()
+        return [rec0, rec1, rec2, rec3]
 
 
 def print_Squares_Trapezoids(net_count):
@@ -102,19 +120,17 @@ def print_Squares_Trapezoids(net_count):
                 line_flag = conductor.inspect_data()
             else:
                 # 构造梯形导体
-                conductor = Trapezoid(square_width,square_hight,point,i)
+                conductor = Trapezoid(square_width, square_hight, point, i)
                 line_flag = conductor.inspect_data()
 
             if line_flag == False:
-                point = [start_point_x, point[1]+square_hight+interval_y]
+                point = [start_point_x, point[1] + square_hight + interval_y]
             else:
-                point = [point[0]+interval_x, point[1]]
+                point = [point[0] + interval_x, point[1]]
 
             ConductorList.append(conductor)
 
     return ConductorList
-
-
 
 
 def write_data(file_index):
