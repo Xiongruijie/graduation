@@ -1004,7 +1004,7 @@ vector<double> solver( map<vector<int>,double> A,vector<double> B ,int N ,int lu
         replace = doubleReplace.front();
         for(int getNumber = 1; getNumber <= N; getNumber++)
         {
-            ADD.push_back(k); 
+            ADD.push_back(k);
             ADD.push_back(getNumber);
             AMD[ADD] = replace[getNumber];
             ADD.clear();

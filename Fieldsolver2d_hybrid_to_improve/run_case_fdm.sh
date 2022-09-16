@@ -19,5 +19,5 @@ for NUM in $ALL; do
 	fi
 	./build/fieldsolver2d --method fdm --in input/input_${NUM}.data --out output/fdm/output_${NUM}.out ${OTHERS}
 	echo "--------------  reference value  -------------"
-	cat input/output_${NUM}.out
+	cat output/fdm/output_${NUM}.out
 done
