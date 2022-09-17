@@ -110,17 +110,17 @@ def print_Squares_Trapezoids(net_count):
     ConductorList = []
 
     # 创建net_count个矩形或者梯形
-    for i in range(net_count):
+    while(len(ConductorList)<net_count):
         line_flag = True
         while (line_flag):
             is_trapezoid = random.randint(0, 1)
             if is_trapezoid == 0:
                 # 构造正方形导体
-                conductor = Square(square_width, square_hight, point, i)
+                conductor = Square(square_width, square_hight, point, len(ConductorList))
                 line_flag = conductor.inspect_data()
             else:
                 # 构造梯形导体
-                conductor = Trapezoid(square_width, square_hight, point, i)
+                conductor = Trapezoid(square_width, square_hight, point, len(ConductorList))
                 line_flag = conductor.inspect_data()
 
             if line_flag == False:
@@ -129,8 +129,14 @@ def print_Squares_Trapezoids(net_count):
                 point = [point[0] + interval_x, point[1]]
 
             ConductorList.append(conductor)
+            if len(ConductorList) >= net_count:
+                break
 
     return ConductorList
+
+def write_into_file(ConductorList):
+    for i in range(ConductorList):
+        pass
 
 
 def write_data(file_index):
