@@ -27,7 +27,7 @@ class Test(TestCase):
 class Test(TestCase):
     def test_print_squares_trapezoids(self):
 
-        ConductorList = print_Squares_Trapezoids(110)
+        ConductorList = print_Squares_Trapezoids(130)
         for i in range(len(ConductorList)):
             if (isinstance(ConductorList[i], Trapezoid)):
                 print("net net" + i.__str__() + "   " + ConductorList[i].output()[0])

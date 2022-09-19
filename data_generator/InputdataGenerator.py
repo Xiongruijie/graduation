@@ -134,9 +134,11 @@ def print_Squares_Trapezoids(net_count):
 
     return ConductorList
 
-def write_into_file(ConductorList):
-    for i in range(ConductorList):
-        pass
+def write_into_file(ConductorList, data_file):
+    for i in range(len(ConductorList)):
+        if isinstance(ConductorList[i], Trapezoid):
+            data_file
+
 
 
 def write_data(file_index):
@@ -146,12 +148,22 @@ def write_data(file_index):
     #     return
     file_path = "../Fieldsolver2d_hybrid_to_improve/input/input_" + file_index.__str__() + ".data"
     file_name = "input_" + file_index.__str__() + ".data"
+    net_count = random.randint(3,500)
     data_file = open(file_path, mode='w')
     print("创建文件" + file_name)
     data_file.write("boundary  -10 0  10 9.9\n")
     dielectric = random.uniform(3.0, 9.9).__round__(1)
     data_file.write("dielectric  " + dielectric.__str__() + "\n")
     # todo 创建data并写进文件
+    ConductorList = print_Squares_Trapezoids(net_count)
+    for i in range(len(ConductorList)):
+        if isinstance(ConductorList[i], Trapezoid):
+            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[0]+"\n")
+            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[1]+"\n")
+            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[2]+"\n")
+            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[3]+"\n")
+        else:
+            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()+"\n")
 
     data_file.close()
 
