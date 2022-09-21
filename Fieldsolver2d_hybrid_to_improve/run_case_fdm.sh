@@ -9,7 +9,7 @@ if [ $# -ne 0 ]; then
 		OTHERS="${OTHERS} ${!index}"
 	done
 else
-	ALL="1 2 3 4 5 6 7 8"
+	ALL="1 2 3 4 5 6 7 8 9"
 fi
 
 for NUM in $ALL; do

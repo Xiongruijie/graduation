@@ -39,15 +39,15 @@ class Square(object):
             return True
 
     def inspect_data(self):
-        if self.right_high[0] > 9.9 or self.right_high[1] > 9.9:
+        if self.right_high[0] > 9.8 or self.right_high[1] > 9.8:
             return False
         else:
             return True
 
     def output(self):
-        rec0 = ('%.4f' % self.left_low[0]).__str__() + " " + (
-                '%.4f' % self.left_low[1]).__str__() + "   " + \
-               ('%.4f' % self.right_high[0]).__str__() + " " + (
+        rec0 = ('%.4f' % self.left_low[0]).__str__() + "  " + (
+                '%.4f' % self.left_low[1]).__str__() + "    " + \
+               ('%.4f' % self.right_high[0]).__str__() + "  " + (
                        '%.4f' % self.right_high[1]).__str__()
 
         return rec0
@@ -57,7 +57,7 @@ class Trapezoid(Square):
     def __init__(self, width=None, hight=None, left_low=None, net_number=None):
         if left_low is None:
             left_low = [random.uniform(-9.9, 9.8), random.uniform(0, 9.8)]
-            print("net" + net_number + "初始值为空，net" + net_number + "的位置被随机赋值")
+            print("net" + net_number.__str__() + "初始值为空，net" + net_number.__str__() + "的位置被随机赋值")
         width_diff = 0.001
         super().__init__(width=width, hight=hight, left_low=left_low)
         self.width_diff = width_diff
@@ -75,21 +75,21 @@ class Trapezoid(Square):
                                        self.rectangle_3_left_low[1] + self.hight_diff]
 
     def output(self):
-        rec0 = ('%.4f' % self.rectangle_0_left_low[0]).__str__() + " " + (
-                '%.4f' % self.rectangle_0_left_low[1]).__str__() + "   " + \
-               ('%.4f' % self.rectangle_0_right_high[0]).__str__() + " " + (
+        rec0 = ('%.4f' % self.rectangle_0_left_low[0]).__str__() + "  " + (
+                '%.4f' % self.rectangle_0_left_low[1]).__str__() + "    " + \
+               ('%.4f' % self.rectangle_0_right_high[0]).__str__() + "  " + (
                        '%.4f' % self.rectangle_0_right_high[1]).__str__()
-        rec1 = ('%.4f' % self.rectangle_1_left_low[0]).__str__() + " " + (
-                '%.4f' % self.rectangle_1_left_low[1]).__str__() + "   " + \
-               ('%.4f' % self.rectangle_1_right_high[0]).__str__() + " " + (
+        rec1 = ('%.4f' % self.rectangle_1_left_low[0]).__str__() + "  " + (
+                '%.4f' % self.rectangle_1_left_low[1]).__str__() + "    " + \
+               ('%.4f' % self.rectangle_1_right_high[0]).__str__() + "  " + (
                        '%.4f' % self.rectangle_1_right_high[1]).__str__()
-        rec2 = ('%.4f' % self.rectangle_2_left_low[0]).__str__() + " " + (
-                '%.4f' % self.rectangle_2_left_low[1]).__str__() + "   " + \
-               ('%.4f' % self.rectangle_2_right_high[0]).__str__() + " " + (
+        rec2 = ('%.4f' % self.rectangle_2_left_low[0]).__str__() + "  " + (
+                '%.4f' % self.rectangle_2_left_low[1]).__str__() + "    " + \
+               ('%.4f' % self.rectangle_2_right_high[0]).__str__() + "  " + (
                        '%.4f' % self.rectangle_2_right_high[1]).__str__()
-        rec3 = ('%.4f' % self.rectangle_3_left_low[0]).__str__() + " " + (
-                '%.4f' % self.rectangle_3_left_low[1]).__str__() + "   " + \
-               ('%.4f' % self.rectangle_3_right_high[0]).__str__() + " " + (
+        rec3 = ('%.4f' % self.rectangle_3_left_low[0]).__str__() + "  " + (
+                '%.4f' % self.rectangle_3_left_low[1]).__str__() + "    " + \
+               ('%.4f' % self.rectangle_3_right_high[0]).__str__() + "  " + (
                        '%.4f' % self.rectangle_3_right_high[1]).__str__()
         return [rec0, rec1, rec2, rec3]
 
@@ -134,10 +134,6 @@ def print_Squares_Trapezoids(net_count):
 
     return ConductorList
 
-def write_into_file(ConductorList, data_file):
-    for i in range(len(ConductorList)):
-        if isinstance(ConductorList[i], Trapezoid):
-            data_file
 
 
 
@@ -148,7 +144,7 @@ def write_data(file_index):
     #     return
     file_path = "../Fieldsolver2d_hybrid_to_improve/input/input_" + file_index.__str__() + ".data"
     file_name = "input_" + file_index.__str__() + ".data"
-    net_count = random.randint(3,500)
+    net_count = random.randint(3,200)
     data_file = open(file_path, mode='w')
     print("创建文件" + file_name)
     data_file.write("boundary  -10 0  10 9.9\n")
@@ -158,13 +154,12 @@ def write_data(file_index):
     ConductorList = print_Squares_Trapezoids(net_count)
     for i in range(len(ConductorList)):
         if isinstance(ConductorList[i], Trapezoid):
-            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[0]+"\n")
-            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[1]+"\n")
-            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[2]+"\n")
-            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()[3]+"\n")
+            data_file.write("net net" + i.__str__() + "    " + ConductorList[i].output()[0]+"\n")
+            data_file.write("net net" + i.__str__() + "    " + ConductorList[i].output()[1]+"\n")
+            data_file.write("net net" + i.__str__() + "    " + ConductorList[i].output()[2]+"\n")
+            data_file.write("net net" + i.__str__() + "    " + ConductorList[i].output()[3]+"\n")
         else:
-            data_file.write("net net" + i.__str__() + "   " + ConductorList[i].output()+"\n")
-
+            data_file.write("net net" + i.__str__() + "    " + ConductorList[i].output()+"\n")
     data_file.close()
 
 
