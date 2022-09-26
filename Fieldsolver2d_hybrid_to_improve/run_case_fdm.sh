@@ -1,15 +1,25 @@
 mkdir -p output/fdm
 mkdir -p output/fdm/backup
 
+#if [ $# -ne 0 ]; then
+#	index=1
+#	ALL="${!index}"
+#	for ((index=2; index <= $#; index++))
+#	do
+#		OTHERS="${OTHERS} ${!index}"
+#	done
+#else
+#	ALL="1 2 3 4 5 6 7 8"
+#fi
+
 if [ $# -ne 0 ]; then
-	index=1
-	ALL="${!index}"
-	for ((index=2; index <= $#; index++))
+
+	for ((index=0; index <= $1; index++))
 	do
-		OTHERS="${OTHERS} ${!index}"
+		ALL="${ALL} ${index}"
 	done
 else
-	ALL="1 2 3 4 5 6 7 8 9"
+	ALL="1 2 3 4 5 6 7 8"
 fi
 
 for NUM in $ALL; do

@@ -1,3 +1,4 @@
+import time
 from turtle import *
 import re
 import matplotlib.pyplot as plt
@@ -113,20 +114,23 @@ def tkinter_print(ConductorList,number):
         print(ConductorList[i].left_low,ConductorList[i].right_high)
         x1, y1 = (ConductorList[i].left_low[0]+10)*120, ConductorList[i].left_low[1]*100
         x2, y2 = (ConductorList[i].right_high[0]+10)*120, ConductorList[i].right_high[1]*100
+        # x1, y1 = (ConductorList[i].left_low[0] + 10) * 300, ConductorList[i].left_low[1] * 300
+        # x2, y2 = (ConductorList[i].right_high[0] + 10) * 300, ConductorList[i].right_high[1] * 300
         print(x1, y1, x2, y2)
         canvas.create_rectangle(x1, y1, x2, y2)
         canvas.update()
     canvas.postscript(file="../Fieldsolver2d_hybrid_to_improve/input/pic/"+number+".eps",colormode='color')
     img = Image.open("../Fieldsolver2d_hybrid_to_improve/input/pic/"+number+".eps")
     img.save("../Fieldsolver2d_hybrid_to_improve/input/pic/"+number+".png", "png")
-    tk.mainloop()
+    # tk.mainloop()
+
 
 
 if __name__ == '__main__':
-    dielectric, ConductorList ,number= read_input_file()
-
+    for i in range(0,50):
+        dielectric, ConductorList ,number= read_input_file("../Fieldsolver2d_hybrid_to_improve/input/input_"+i.__str__()+".data")
     # print_input_file(ConductorList)
     # test_Conductor(ConductorList)
     # print_img(ConductorList)
-
-    tkinter_print(ConductorList,number)
+        tkinter_print(ConductorList,number)
+        time.sleep(5)

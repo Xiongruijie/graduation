@@ -64,8 +64,9 @@ class Trapezoid(Square):
         if left_low is None:
             left_low = [random.uniform(-9.9, 9.8), random.uniform(0, 9.8)]
             print("net" + net_number.__str__() + "初始值为空，net" + net_number.__str__() + "的位置被随机赋值")
-        width_diff = 0.001
+
         super().__init__(width=width, hight=hight, left_low=left_low)
+        width_diff = self.width * 0.1
         self.width_diff = width_diff
         self.hight_diff = self.hight / 4
         self.rectangle_0_left_low = self.left_low
@@ -104,10 +105,13 @@ class Clip(object):
     def __init__(self, x1, y1, x2, y2, ClipList):
         self.left_low = [x1, y1]
         self.right_high = [x2, y2]
+        self.flag = True
         for i in range(len(ClipList)):
             if self.overlap(ClipList[i]) == False:
                 self.flag = False
-        self.flag = True
+                break
+            else:
+                self.flag = True
         self.fall_flag = False
 
     def overlap(self, clip):
@@ -116,9 +120,9 @@ class Clip(object):
         max_x = min(self.right_high[0], clip.right_high[0])
         max_y = min(self.right_high[1], clip.right_high[1])
         if (min_x > max_x or min_y > max_y):
-            return False
-        else:
             return True
+        else:
+            return False
 
 
 def print_Squares_Trapezoids(net_count):
@@ -128,11 +132,27 @@ def print_Squares_Trapezoids(net_count):
     interval_y = random.uniform(0.12, 0.15).__round__(4)
     square_width = random.uniform(0.03, 0.05).__round__(4)
     square_hight = random.uniform(0.05, 0.1).__round__(4)
+    master_square_width = random.uniform(0.5, 2).__round__(4)
+    master_square_hight = random.uniform(0.5, 2).__round__(4)
 
     ConductorList = []
     ClipList = []
+    # 创建master导体
+    point = [random.uniform(-10, 7.9).__round__(4), random.uniform(0, 7.9).__round__(4)]
+    clip = Clip(point[0], point[1], point[0] + 2, point[1] + 2, ClipList)
+    ClipList.append(clip)
+    is_trapezoid = random.randint(0, 1)
+    if is_trapezoid == 0:
+        # 构造正方形导体
+        conductor = Square(master_square_width, master_square_hight, point, len(ConductorList))
+    else:
+        # 构造梯形导体
+        conductor = Trapezoid(master_square_width, master_square_hight, point, len(ConductorList))
+    ConductorList.append(conductor)
+
+
     # 创建net_count个矩形或者梯形
-    while (len(ConductorList) < net_count):
+    while (len(ConductorList) < net_count - 1):
         # 生成3*3的线簇片
         while True:
             point = [random.uniform(-10, 7.9).__round__(4), random.uniform(0, 7.9).__round__(4)]
@@ -201,4 +221,5 @@ def write_data(file_index):
 
 
 if __name__ == '__main__':
-    write_data(9)
+    for i in range(9,5000):
+        write_data(i)
