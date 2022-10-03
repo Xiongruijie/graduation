@@ -603,6 +603,16 @@ void print_result_2(map<int, Net*> nets, string result_out, int b)
 	cout << endl;
 	fout << endl;
 
+	struct rusage usage;
+    getrusage(RUSAGE_SELF, &usage);
+    long user = usage.ru_utime.tv_sec * 1000000 + usage.ru_utime.tv_usec; // user time used
+    long sys  = usage.ru_stime.tv_sec * 1e6 + usage.ru_stime.tv_usec; // sys time used
+    long mem  = usage.ru_maxrss;
+    fout << "User time  : " << setw(10) << user << " us" << endl;
+    fout << "Sys time   : " << setw(10) << sys << " us" << endl;
+    fout << "Total time : " << setw(10) << user+sys << " us" << endl;
+    fout << "Max memory : " << setw(10) << mem << " kB" << endl;
+
     fout.close();
 }
 

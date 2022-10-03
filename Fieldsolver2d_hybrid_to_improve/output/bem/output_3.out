@@ -2,3 +2,7 @@
 # master = net0
           net0          net1          net2          net3          net4
  net0: 0.153729fF   0.0531896fF   0.053187fF   0.0118472fF   0.0118269fF
+User time  :      45528 us
+Sys time   :       3794 us
+Total time :      49322 us
+Max memory :       6612 kB

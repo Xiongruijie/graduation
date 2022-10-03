@@ -193,14 +193,14 @@ def print_Squares_Trapezoids(net_count):
     return ConductorList
 
 
-def write_data(file_index):
+def write_data(file_index, maxNumber):
     # 判定是否该文件是否存在 调试时记得去除
     # if (os.path.exists("../Fieldsolver2d_hybrid_to_improve/input/input_" + file_index.__str__() + ".data")):
     #     print(("input_" + file_index.__str__() + ".data" + "文件已经存在"))
     #     return
     file_path = "../Fieldsolver2d_hybrid_to_improve/input/input_" + file_index.__str__() + ".data"
     file_name = "input_" + file_index.__str__() + ".data"
-    net_count = random.randint(10, 1000)
+    net_count = random.randint(10, maxNumber)
     data_file = open(file_path, mode='w')
     print("创建文件" + file_name)
     data_file.write("boundary  -10 0  10 9.9\n")
@@ -221,5 +221,5 @@ def write_data(file_index):
 
 
 if __name__ == '__main__':
-    for i in range(9,5000):
-        write_data(i)
+    for i in range(9,3000):
+        write_data(i,100)

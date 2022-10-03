@@ -1,16 +1,6 @@
 mkdir -p output/fdm
 mkdir -p output/fdm/backup
 
-#if [ $# -ne 0 ]; then
-#	index=1
-#	ALL="${!index}"
-#	for ((index=2; index <= $#; index++))
-#	do
-#		OTHERS="${OTHERS} ${!index}"
-#	done
-#else
-#	ALL="1 2 3 4 5 6 7 8"
-#fi
 
 if [ $# -ne 0 ]; then
 
@@ -21,7 +11,7 @@ if [ $# -ne 0 ]; then
 else
 	ALL="1 2 3 4 5 6 7 8"
 fi
-
+ALL="13"
 for NUM in $ALL; do
 	echo "######################## $NUM ########################"
 	if [ -f output/fdm/${NUM}.out ]; then
