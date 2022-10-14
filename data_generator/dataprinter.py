@@ -7,7 +7,6 @@ import matplotlib.patches as patches
 from tkinter import *
 from PIL import Image
 
-
 import pandas as pd
 
 
@@ -105,33 +104,36 @@ def print_img(ConductorList):
     plt.show()
 
 
-def tkinter_print(ConductorList,number):
+def tkinter_print(ConductorList, number):
     tk = Tk()
     canvas = Canvas(tk, width=4000, height=2000)
     canvas.pack()
 
     for i in range(len(ConductorList)):
         # print(ConductorList[i].left_low,ConductorList[i].right_high)
-        x1, y1 = (ConductorList[i].left_low[0]+10)*120, ConductorList[i].left_low[1]*100
-        x2, y2 = (ConductorList[i].right_high[0]+10)*120, ConductorList[i].right_high[1]*100
+        x1, y1 = (ConductorList[i].left_low[0] + 10) * 120, ConductorList[i].left_low[1] * 100
+        x2, y2 = (ConductorList[i].right_high[0] + 10) * 120, ConductorList[i].right_high[1] * 100
         # x1, y1 = (ConductorList[i].left_low[0] + 10) * 300, ConductorList[i].left_low[1] * 300
         # x2, y2 = (ConductorList[i].right_high[0] + 10) * 300, ConductorList[i].right_high[1] * 300
         # print(x1, y1, x2, y2)
-        canvas.create_rectangle(x1, y1, x2, y2)
+        if i == 0:
+            canvas.create_rectangle(x1, y1, x2, y2, fill='red')
+        else:
+            canvas.create_rectangle(x1, y1, x2, y2, fill='limegreen')
         canvas.update()
-    canvas.postscript(file="../Fieldsolver2d_hybrid_to_improve/input/pic/"+number+".eps",colormode='color')
-    img = Image.open("../Fieldsolver2d_hybrid_to_improve/input/pic/"+number+".eps")
-    img.save("../Fieldsolver2d_hybrid_to_improve/input/pic/"+number+".png", "png")
+    canvas.postscript(file="../Fieldsolver2d_hybrid_to_improve/input/pic/" + number + ".eps", colormode='color')
+    img = Image.open("../Fieldsolver2d_hybrid_to_improve/input/pic/" + number + ".eps")
+    img.save("../Fieldsolver2d_hybrid_to_improve/input/pic/" + number + ".png", "png")
     # tk.mainloop()
 
 
-
 if __name__ == '__main__':
-    for i in range(2800,3000):
-        dielectric, ConductorList ,number= read_input_file("../Fieldsolver2d_hybrid_to_improve/input/input_"+i.__str__()+".data")
-        print("=============================input_"+i.__str__()+".data==================================")
-    # print_input_file(ConductorList)
-    # test_Conductor(ConductorList)
-    # print_img(ConductorList)
-        tkinter_print(ConductorList,number)
+    for i in range(0, 100):
+        dielectric, ConductorList, number = read_input_file(
+            "../Fieldsolver2d_hybrid_to_improve/input/input_" + i.__str__() + ".data")
+        print("=============================input_" + i.__str__() + ".data==================================")
+        # print_input_file(ConductorList)
+        # test_Conductor(ConductorList)
+        # print_img(ConductorList)
+        tkinter_print(ConductorList, number)
         time.sleep(1)

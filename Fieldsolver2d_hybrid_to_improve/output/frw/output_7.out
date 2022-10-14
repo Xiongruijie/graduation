@@ -1,4 +1,8 @@
 # length = 1um
 # master = net0
           net0          net1          net2
- net0: 0.349129fF   0.174263fF   0.179027fF
+ net0: 0.352271fF   0.170054fF   0.168292fF
+User time  :     469518 us
+Sys time   :          0 us
+Total time :     469518 us
+Max memory :       7032 kB

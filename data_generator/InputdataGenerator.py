@@ -26,6 +26,7 @@ class Square(object):
         self.hight = hight
         self.left_low = left_low
         self.right_high = [self.left_low[0] + self.width, self.left_low[1] + self.hight]
+        self.flag = True
 
     def overlap(self, rectangle):
         min_x = max(self.left_low[0], rectangle.left_low[0])
@@ -38,12 +39,21 @@ class Square(object):
         else:
             return True
 
+    def is_overlap(self, conductList):
+        for i in range(len(conductList)):
+            if self.overlap(conductList[i]) is False:
+                continue
+            else:
+                return True
+        return False
+
     def inspect_data_line(self, clip):
-        if self.right_high[0] > clip.right_high[0] :
+        if self.right_high[0] > clip.right_high[0]:
 
             return False
         else:
             return True
+
     def inspect_data_column(self, clip):
         if self.right_high[1] > clip.right_high[1]:
             return False
@@ -125,89 +135,77 @@ class Clip(object):
             return False
 
 
-def print_Squares_Trapezoids(net_count):
+def print_Squares_Trapezoids(net_count, print_pic=False):
     # 随机设置初始点
 
-    interval_x = random.uniform(0.12, 0.15).__round__(4)
-    interval_y = random.uniform(0.12, 0.15).__round__(4)
-    square_width = random.uniform(0.03, 0.05).__round__(4)
-    square_hight = random.uniform(0.05, 0.1).__round__(4)
-    master_square_width = random.uniform(0.5, 2).__round__(4)
-    master_square_hight = random.uniform(0.5, 2).__round__(4)
+    # interval_x = random.uniform(0.12, 0.15).__round__(4)
+    # interval_y = random.uniform(0.12, 0.15).__round__(4)
+    # master_square_width = random.uniform(0.5, 2).__round__(4)
+    # master_square_hight = random.uniform(0.5, 2).__round__(4)
+    if print_pic is True:
+        square_width = random.uniform(0.10, 0.30).__round__(4)
+        square_hight = random.uniform(0.10, 0.30).__round__(4)
+    else:
+        square_width = random.uniform(0.03, 0.05).__round__(4)
+        square_hight = random.uniform(0.05, 0.1).__round__(4)
 
     ConductorList = []
-    ClipList = []
-    # 创建master导体
-    point = [random.uniform(-10, 7.9).__round__(4), random.uniform(0, 7.9).__round__(4)]
-    clip = Clip(point[0], point[1], point[0] + 2, point[1] + 2, ClipList)
-    ClipList.append(clip)
-    is_trapezoid = random.randint(0, 1)
-    if is_trapezoid == 0:
-        # 构造正方形导体
-        conductor = Square(master_square_width, master_square_hight, point, len(ConductorList))
+    # 主导体
+    if print_pic is True:
+        point = [random.uniform(-5, 0).__round__(4), random.uniform(0, 3).__round__(4)]
     else:
-        # 构造梯形导体
-        conductor = Trapezoid(master_square_width, master_square_hight, point, len(ConductorList))
+        point = [random.uniform(-10, 9.0).__round__(4), random.uniform(0, 9.0).__round__(4)]
+    conductor = Square(square_width, square_hight, point, len(ConductorList))
     ConductorList.append(conductor)
 
-
-    # 创建net_count个矩形或者梯形
     while (len(ConductorList) < net_count - 1):
-        # 生成3*3的线簇片
-        while True:
-            point = [random.uniform(-10, 7.9).__round__(4), random.uniform(0, 7.9).__round__(4)]
-            clip = Clip(point[0], point[1], point[0] + 2, point[1] + 2, ClipList)
-            if clip.flag is True:
-                break
-        ClipList.append(clip)
-
-        line_flag = True
-        column_flag = True
-        while (line_flag):
+        if print_pic is True:
+            is_trapezoid = 0
+        else:
             is_trapezoid = random.randint(0, 1)
-            if is_trapezoid == 0:
-                # 构造正方形导体
+        if is_trapezoid == 0:
+            # 构造正方形导体
+            while True:
+                if print_pic is True:
+                    point = [random.uniform(-5, 0).__round__(4), random.uniform(0, 5).__round__(4)]
+                else:
+
+                    point = [random.uniform(-10, 9.0).__round__(4), random.uniform(0, 9.0).__round__(4)]
                 conductor = Square(square_width, square_hight, point, len(ConductorList))
-                line_flag = conductor.inspect_data_line(clip)
-                column_flag = conductor.inspect_data_column(clip)
-            else:
-                # 构造梯形导体
+                if conductor.is_overlap(ConductorList) is False:
+                    ConductorList.append(conductor)
+                    break
+                else:
+                    continue
+        else:
+            # 构造梯形导体
+            while True:
+                point = [random.uniform(-10, 9.0).__round__(4), random.uniform(0, 9.0).__round__(4)]
                 conductor = Trapezoid(square_width, square_hight, point, len(ConductorList))
-                line_flag = conductor.inspect_data_line(clip)
-                column_flag = conductor.inspect_data_column(clip)
-
-            if line_flag == False:
-                point = [clip.left_low[0], point[1] + square_hight + interval_y]
-                line_flag = True
-            elif column_flag == False:
-                break
-            else:
-                point = [point[0] + interval_x, point[1]]
-
-            ConductorList.append(conductor)
-            if len(ConductorList) >= net_count:
-                break
-
-
-
+                if conductor.is_overlap(ConductorList) is False:
+                    ConductorList.append(conductor)
+                    break
+                else:
+                    continue
     return ConductorList
 
 
-def write_data(file_index, maxNumber):
+def write_data(file_index, maxNumber=100, print_pic=False):
     # 判定是否该文件是否存在 调试时记得去除
     # if (os.path.exists("../Fieldsolver2d_hybrid_to_improve/input/input_" + file_index.__str__() + ".data")):
     #     print(("input_" + file_index.__str__() + ".data" + "文件已经存在"))
     #     return
     file_path = "../Fieldsolver2d_hybrid_to_improve/input/input_" + file_index.__str__() + ".data"
     file_name = "input_" + file_index.__str__() + ".data"
-    net_count = random.randint(10, maxNumber)
+    # net_count = random.randint(10, maxNumber)
+    net_count = maxNumber
     data_file = open(file_path, mode='w')
     print("创建文件" + file_name)
     data_file.write("boundary  -10 0  10 9.9\n")
     dielectric = random.uniform(3.0, 9.9).__round__(1)
     data_file.write("dielectric  " + dielectric.__str__() + "\n")
     # todo 创建data并写进文件
-    ConductorList = print_Squares_Trapezoids(net_count)
+    ConductorList = print_Squares_Trapezoids(net_count, print_pic)
 
     for i in range(len(ConductorList)):
         if isinstance(ConductorList[i], Trapezoid):
@@ -221,5 +219,5 @@ def write_data(file_index, maxNumber):
 
 
 if __name__ == '__main__':
-    for i in range(9,3000):
-        write_data(i,100)
+    for i in range(9, 100):
+        write_data(i,maxNumber=i-8,print_pic=False)
