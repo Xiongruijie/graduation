@@ -28,6 +28,7 @@ class CircuitDataset(Dataset):
     def __getitem__(self, index):
         image_path = self.data_list[index]
         image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         # image = image.astype('float32')
         # if self.transform is not None:
         #     image = self.transform(image)
@@ -170,9 +171,10 @@ def judge_by_file(output_path, compare_path):
     for i in range(len(selected_data_re)):
         selected_data_re[i] = float(selected_data_re[i][0:-2])
     accuracy_list = []
-    for i in range(len(baseline_data_re)):
-        accuracy_list.append(abs(baseline_data_re[i] - selected_data_re[i]) / baseline_data_re[i])
-    accuracy = accuracy_list[0]
+    # for i in range(len(baseline_data_re)):
+    #     accuracy_list.append(abs(baseline_data_re[i] - selected_data_re[i]) / baseline_data_re[i])
+    accuracy_list.append(abs(baseline_data_re[0] - selected_data_re[0]) / (baseline_data_re[0]+1e-8))
+    accuracy = 1 - accuracy_list[0]
 
     # 时间、空间
     time = int(re.split(r'[ ]+', selected_lines[6])[3])
