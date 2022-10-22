@@ -128,7 +128,7 @@ def tkinter_print(ConductorList, number):
 
 
 if __name__ == '__main__':
-    for i in range(0, 100):
+    for i in range(209, 500):
         dielectric, ConductorList, number = read_input_file(
             "../Fieldsolver2d_hybrid_to_improve/input/input_" + i.__str__() + ".data")
         print("=============================input_" + i.__str__() + ".data==================================")
@@ -136,4 +136,4 @@ if __name__ == '__main__':
         # test_Conductor(ConductorList)
         # print_img(ConductorList)
         tkinter_print(ConductorList, number)
-        time.sleep(1)
+        # time.sleep(0.5)

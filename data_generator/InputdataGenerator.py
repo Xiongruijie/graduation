@@ -198,7 +198,7 @@ def write_data(file_index, maxNumber=100, print_pic=False):
     file_path = "../Fieldsolver2d_hybrid_to_improve/input/input_" + file_index.__str__() + ".data"
     file_name = "input_" + file_index.__str__() + ".data"
     # net_count = random.randint(10, maxNumber)
-    net_count = maxNumber
+    net_count = random.randint(5,maxNumber)
     data_file = open(file_path, mode='w')
     print("创建文件" + file_name)
     data_file.write("boundary  -10 0  10 9.9\n")
@@ -219,5 +219,6 @@ def write_data(file_index, maxNumber=100, print_pic=False):
 
 
 if __name__ == '__main__':
-    for i in range(9, 100):
-        write_data(i,maxNumber=i-8,print_pic=False)
+    for i in range(100, 500):
+        write_data(i,maxNumber=50,print_pic=False)
+

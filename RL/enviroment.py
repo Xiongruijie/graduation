@@ -1,5 +1,7 @@
 import math
+import random
 import re
+from time import sleep
 
 import gym
 import os
@@ -9,6 +11,8 @@ import shutil
 
 import numpy as np
 import paddle
+import torch
+import torchvision
 from matplotlib import pyplot as plt
 from paddle.io import Dataset
 from paddle.vision.transforms import Normalize
@@ -16,11 +20,11 @@ from paddle.vision.transforms import Normalize
 
 # end_index 输入
 class CircuitDataset(Dataset):
-    def __init__(self, start_index,end_index, pic_path='../Fieldsolver2d_hybrid_to_improve/input/pic/',
+    def __init__(self, start_index, end_index, pic_path='../Fieldsolver2d_hybrid_to_improve/input/pic/',
                  transform=Normalize(mean=[127.5], std=[127.5], data_format='CHW')):
         super(CircuitDataset, self).__init__()
         self.data_list = []
-        for i in range(start_index,end_index):
+        for i in range(start_index, end_index):
             file_path = pic_path + i.__str__() + '.png'
             self.data_list.append(file_path)
         self.transform = transform
@@ -32,8 +36,14 @@ class CircuitDataset(Dataset):
         # image = image.astype('float32')
         # if self.transform is not None:
         #     image = self.transform(image)
-        image = paddle.vision.transforms.to_tensor(image, data_format='CHW')
-        image = paddle.tensor.to_tensor(image, dtype='float32').unsqueeze(0)
+        image = paddle.vision.transforms.to_tensor(image, data_format='CHW').unsqueeze(0)
+        # transform1 = torchvision.transforms.Compose([
+        #     torchvision.transforms.ToTensor()
+        # ])
+
+        # image = transform1(image)
+        # # image = torch.tensor(image,dtype=torch.float32).unsqueeze(0)
+
         return image
 
     def __len__(self):
@@ -41,7 +51,8 @@ class CircuitDataset(Dataset):
 
 
 class CircuitEnv(gym.Env):
-    def __init__(self, local_index, init_start_index,init_end_index, prefer_accuracy=False, prefer_time=False, prefer_memory=False):
+    def __init__(self, local_index, init_start_index, init_end_index, prefer_accuracy=False, prefer_time=False,
+                 prefer_memory=False):
         """
 
         :param local_index: 当前游标
@@ -52,11 +63,13 @@ class CircuitEnv(gym.Env):
         :param prefer_memory:  内存偏好
         """
         # 读取图片位置
+        self.init_start_index = init_start_index
+        self.init_end_index = init_end_index
         self.action_space = 3
         self.root = '../Fieldsolver2d_hybrid_to_improve/input/pic/'
         self.local_index = local_index
         # self.reward = None
-        self.dataset = CircuitDataset(init_start_index,init_end_index)
+        self.dataset = CircuitDataset(init_start_index, init_end_index)
         self.state = self.dataset.__getitem__(self.local_index)
         self.prefer_accuracy = prefer_accuracy
         self.prefer_time = prefer_time
@@ -134,18 +147,22 @@ class CircuitEnv(gym.Env):
 
         # 计算action 输入然后查找对应的解
         is_terminal = False
-        action = paddle.to_tensor(action,dtype='float32')
+        action = paddle.to_tensor(action, dtype='float32')
         reward = self.reward(action, self.local_index)
 
-        next_state = self.dataset.__getitem__(self.local_index + 1)
-        self.state = next_state
-        self.local_index = self.local_index + 1
-        if self.local_index == 20000:
+        if self.local_index + 1 < self.init_end_index:
+            next_state = self.dataset.__getitem__(self.local_index + 1)
+            self.state = next_state
+        else:
             is_terminal = True
+            next_state = self.state
+        self.local_index = self.local_index + 1
+
         return next_state, reward, is_terminal
 
     def reset(self, **kwargs):
-        self.local_index = 0
+        # self.local_index = self.init_start_index
+        self.local_index = random.randint(0,88)
         return self.get_state()
 
 
@@ -173,7 +190,7 @@ def judge_by_file(output_path, compare_path):
     accuracy_list = []
     # for i in range(len(baseline_data_re)):
     #     accuracy_list.append(abs(baseline_data_re[i] - selected_data_re[i]) / baseline_data_re[i])
-    accuracy_list.append(abs(baseline_data_re[0] - selected_data_re[0]) / (baseline_data_re[0]+1e-8))
+    accuracy_list.append(abs(baseline_data_re[0] - selected_data_re[0]) / (baseline_data_re[0] + 1e-8))
     accuracy = 1 - accuracy_list[0]
 
     # 时间、空间
@@ -220,12 +237,13 @@ def paint_pic():
     return fdm_timeList, fdm_memoryList, bem_timeList, bem_memoryList, frw_timeList, frw_memoryList
 
 
-def paint_bar(data,pic_name,pic_title):
+def paint_bar(data, pic_name, pic_title):
     N = 10
     plt.bar(x=list(range(N)), height=data)
     plt.title(pic_title)
     plt.show()
     plt.savefig(pic_name)
+
 
 def paint_bar_for_10():
     fdm_timeList, fdm_memoryList, bem_timeList, bem_memoryList, frw_timeList, frw_memoryList = paint_pic()
@@ -236,10 +254,12 @@ def paint_bar_for_10():
     paint_bar(frw_timeList, 'frw_timeList.jpg', 'frw_time_consume')
     paint_bar(frw_memoryList, 'frw_memoryList.jpg', 'frw_memory_consume')
 
+
 if __name__ == '__main__':
-    env = CircuitEnv(0, 5)
+    dataset = CircuitDataset(0, 99)
+    for i in range(99):
+        print(dataset.__getitem__(i).shape)
     # print(env.reward([],index=6))
     # out = '../Fieldsolver2d_hybrid_to_improve/output/bem/output_6.out'
     # cmp = '../Fieldsolver2d_hybrid_to_improve/output/fdm/output_6.out'
     # judge_by_file(out, cmp)
-
