@@ -111,10 +111,10 @@ def tkinter_print(ConductorList, number):
 
     for i in range(len(ConductorList)):
         # print(ConductorList[i].left_low,ConductorList[i].right_high)
-        x1, y1 = (ConductorList[i].left_low[0] + 10) * 120, ConductorList[i].left_low[1] * 100
-        x2, y2 = (ConductorList[i].right_high[0] + 10) * 120, ConductorList[i].right_high[1] * 100
-        # x1, y1 = (ConductorList[i].left_low[0] + 10) * 300, ConductorList[i].left_low[1] * 300
-        # x2, y2 = (ConductorList[i].right_high[0] + 10) * 300, ConductorList[i].right_high[1] * 300
+        # x1, y1 = (ConductorList[i].left_low[0] + 10) * 120, ConductorList[i].left_low[1] * 100
+        # x2, y2 = (ConductorList[i].right_high[0] + 10) * 120, ConductorList[i].right_high[1] * 100
+        x1, y1 = (ConductorList[i].left_low[0] +1) * 600, ConductorList[i].left_low[1] * 600
+        x2, y2 = (ConductorList[i].right_high[0] +1) * 600, ConductorList[i].right_high[1] * 600
         # print(x1, y1, x2, y2)
         if i == 0:
             canvas.create_rectangle(x1, y1, x2, y2, fill='red')
@@ -123,17 +123,14 @@ def tkinter_print(ConductorList, number):
         canvas.update()
     canvas.postscript(file="../Fieldsolver2d_hybrid_to_improve/input/pic/" + number + ".eps", colormode='color')
     img = Image.open("../Fieldsolver2d_hybrid_to_improve/input/pic/" + number + ".eps")
-    img.save("../Fieldsolver2d_hybrid_to_improve/input/pic/" + number + ".png", "png")
+    img.save("../Fieldsolver2d_hybrid_to_improve/input/pic/" + number + "_.png", "png")
     # tk.mainloop()
 
 
 if __name__ == '__main__':
-    for i in range(209, 500):
+    for i in range(4, 5):
         dielectric, ConductorList, number = read_input_file(
             "../Fieldsolver2d_hybrid_to_improve/input/input_" + i.__str__() + ".data")
         print("=============================input_" + i.__str__() + ".data==================================")
-        # print_input_file(ConductorList)
-        # test_Conductor(ConductorList)
-        # print_img(ConductorList)
         tkinter_print(ConductorList, number)
-        # time.sleep(0.5)
+
