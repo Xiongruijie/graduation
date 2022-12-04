@@ -75,4 +75,5 @@ if __name__ == '__main__':
     time, memory = read_output_file('frw', 10, 99)
     print_bar_line(time, list(range(len(time))), 'frw_time_bar.png')
     print_bar_line(memory, list(range(len(memory))), 'frw_memory_bar.png')
+    # time
 
