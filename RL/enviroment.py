@@ -67,7 +67,7 @@ class CircuitEnv(gym.Env):
         self.init_end_index = init_end_index
         self.action_space = 3
         self.root = '../Fieldsolver2d_hybrid_to_improve/input/pic/'
-        self.local_index = local_index
+        self.local_index = random.randint(self.init_start_index, self.init_end_index)
         # self.reward = None
         self.dataset = CircuitDataset(init_start_index, init_end_index)
         self.state = self.dataset.__getitem__(self.local_index)

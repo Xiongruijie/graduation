@@ -170,6 +170,7 @@ def main(memory_modify = True):
     logger.set_dir('./{}_{}'.format(args.env, args.seed))
 
     # 定义超参数
+    mode = 'acc'
     explore = 50000
     epsilon = 1
     gamma = 0.99
@@ -179,7 +180,7 @@ def main(memory_modify = True):
     begin_train = False
     batch_size = 1
 
-    epochs = 40
+    epochs = 400
     learn_steps = 0
     writer = LogWriter('logs')
     epoch_range = 50
@@ -188,7 +189,12 @@ def main(memory_modify = True):
     critic = Critic()
     actor_target = Actor()
     critic_target = Critic()
-    env = enviroment.CircuitEnv(0, 0, 100)
+    if mode=='acc':
+        env = enviroment.CircuitEnv(0, 0, 500, prefer_accuracy=True)
+    elif mode=='time':
+        env = enviroment.CircuitEnv(0, 0, 500, prefer_time=True)
+    elif mode=='memory':
+        env = enviroment.CircuitEnv(0, 0, 500, prefer_memory=True)
 
     # 优化器
     critic_optim = paddle.optimizer.Adam(parameters=critic.parameters(), learning_rate=3e-5)
@@ -196,14 +202,15 @@ def main(memory_modify = True):
 
     # 画图数据
     RewardList = []
+    RewardListFile = open("rewardListFile.csv", "w")
 
     for epoch in range(0, epochs):  # count():
-        print("epoch:    "+epoch.__str__())
+        # print("epoch:    "+epoch.__str__())
         state = env.reset()
         episode_reward = 0
         epoch_reward = 0
         for time_step in range(epoch_range):
-            print('time_step' + time_step.__str__())
+            # print('time_step' + time_step.__str__())
             action, fc_output = actor.select_action(epsilon, state)
             next_state, reward, done = env.step(action)
             episode_reward = reward
@@ -263,23 +270,31 @@ def main(memory_modify = True):
             else:
                 state = next_state
 
-        RewardList.append(epoch_reward/epoch_range)
+        reward = epoch_reward / epoch_range
+        RewardList.append(reward)
+        RewardListFile.write("{0},".format(reward.__str__()))
 
         writer.add_scalar('episode reward', episode_reward, epoch)
-        if epoch % 10 == 0:
+        if epoch % 50 == 0:
             print('Epoch:{}, episode reward is {}'.format(epoch, episode_reward))
 
-        # if epoch % 200 == 0:
-        if epoch % 20 == 0:
-            paddle.save(actor.state_dict(), 'model/ddpg-actor' + str(epoch) + '.para')
-            paddle.save(critic.state_dict(), 'model/ddpg-critic' + str(epoch) + '.para')
+        if epoch % 100 == 0:
+        # if epoch % 20 == 0:
+            paddle.save(actor.state_dict(), 'model/'+mode+'/ddpg-actor' + str(epoch) + '.para')
+            paddle.save(critic.state_dict(), 'model/'+mode+'/ddpg-critic' + str(epoch) + '.para')
             print('model saved!')
 
+    # test
+    print(env.local_index)
+
+
+
     # reward 图像
-    with PdfPages('pic/reward.jpg') as pdf:
-        plt.plot(np.array(RewardList))
-        pdf.savefig()
-        plt.close()
+
+    # with PdfPages('pic/reward.jpg') as pdf:
+    #     plt.plot(np.array(RewardList))
+    #     pdf.savefig()
+    #     plt.close()
 
 
 
